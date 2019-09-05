@@ -21,6 +21,11 @@
       "app",
       "kebab-case"
     ],
+    "import-spacing": true,
+    "indent": [
+      true,
+      "spaces"
+    ],
     "import-blacklist": [
       true,
       "rxjs/Rx"
