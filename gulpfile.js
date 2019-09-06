@@ -24,7 +24,7 @@ gulp.task('svgstore', function () {
           },
           {
             cleanupIDs: {
-              prefix: prefix + '-',
+              prefix: prefix,
               minify: true
             }
           }
