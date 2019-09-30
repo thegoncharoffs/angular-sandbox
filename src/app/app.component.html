@@ -15,7 +15,20 @@
   <tab-panel-item
     [title]="'Angular'"
   >
-    <examples-page></examples-page>
+    <main class="app__main">
+      <div class="app__links">
+        <div class="app__column">
+          <a
+            class="app__link"
+            routerLink="/routing"
+            routerLinkActive="_active"
+          >
+            Routing
+          </a>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </main>
   </tab-panel-item>
 
   <tab-panel-item
@@ -31,17 +44,3 @@
   </tab-panel-item>
 </tab-panel>
 
-<main class="app__main">
-  <div class="app__links">
-    <div class="app__column">
-      <a
-        class="app__link"
-        routerLink="/routing"
-        routerLinkActive="_active"
-      >
-        Routing
-      </a>
-    </div>
-  </div>
-  <router-outlet></router-outlet>
-</main>
