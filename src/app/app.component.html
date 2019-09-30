@@ -1,9 +1,9 @@
-<header class="header">
+<header class="app__header">
 
-  <div class="header__logo">
-    <span class="header__text">Angular Sandbox</span>
+  <div class="app__header-logo">
+    <span class="app__header-text">Angular Sandbox</span>
 
-    <svg class="header__icon"
+    <svg class="app__header-icon"
          viewBox="0 0 20 20">
       <use href="#sandbox"></use>
     </svg>
@@ -11,4 +11,17 @@
 
 </header>
 
-<router-outlet></router-outlet>
+<main class="app__main">
+  <div class="app__links">
+    <div class="app__column">
+      <a
+        class="app__link"
+        routerLink="/routing"
+        routerLinkActive="_active"
+      >
+        Routing
+      </a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</main>

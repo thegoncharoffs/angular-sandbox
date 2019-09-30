@@ -7,7 +7,7 @@ import {Component, HostBinding} from '@angular/core';
 })
 export class AppComponent {
   @HostBinding('class.main')
-    hostClass = true;
+  hostClass = true;
 
   title = 'angular-sandbox';
 }
