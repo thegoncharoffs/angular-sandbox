@@ -53,6 +53,24 @@
       </div>
     </main>
   </tab-panel-item>
+
+  <tab-panel-item
+    [title]="'RXJS'"
+  >
+    <main class="app__main">
+      <div class="app__links">
+        <div class="app__column">
+          <a
+            class="app__link"
+            routerLink="/observable"
+            routerLinkActive="_active"
+          >
+            Observable
+          </a>
+        </div>
+      </div>
+    </main>
+  </tab-panel-item>
 </tab-panel>
 
 <router-outlet></router-outlet>
