@@ -27,7 +27,6 @@
           </a>
         </div>
       </div>
-      <router-outlet></router-outlet>
     </main>
   </tab-panel-item>
 
@@ -40,7 +39,20 @@
   <tab-panel-item
     [title]="'Redux'"
   >
-    Redux
+    <main class="app__main">
+      <div class="app__links">
+        <div class="app__column">
+          <a
+            class="app__link"
+            routerLink="/ngrx"
+            routerLinkActive="_active"
+          >
+            NGRX
+          </a>
+        </div>
+      </div>
+    </main>
   </tab-panel-item>
 </tab-panel>
 
+<router-outlet></router-outlet>

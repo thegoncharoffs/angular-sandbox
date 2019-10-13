@@ -3,20 +3,25 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {TabPanelModule} from './components/tab-panel/tab-panel.module';
-import {TabPanelItemModule} from './components/tab-panel/item/tab-panel-item.module';
-import {ExamplesPageModule} from './components/examples-page/examples-page.module';
+import {ExamplesPageComponent} from './components/examples-page/examples-page.component';
+import {TabPanelComponent} from './components/tab-panel/tab-panel.component';
+import {TabPanelItemComponent} from './components/tab-panel/item/tab-panel-item.component';
+import {NgrxComponent} from './modules/ngrx/ngrx.component';
+import {StoreModule} from '@ngrx/store';
+import {reducers} from './modules/ngrx/store/reducers/reducers';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExamplesPageComponent,
+    TabPanelComponent,
+    TabPanelItemComponent,
+    NgrxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TabPanelModule,
-    TabPanelItemModule,
-    ExamplesPageModule
+    StoreModule.forRoot(reducers),
   ],
   providers: [],
   bootstrap: [AppComponent]
