@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import {AppState} from './store/app.state';
 import {select, Store} from '@ngrx/store';
 import {selectCounterLabel, selectCounterValue} from './store/selectors/counter.selectors';
-import {counterDecrease, counterIncrease, counterSet} from "./store/actions/counter.actions";
+import {counterDecrease, counterIncrease, counterSet, loadValue} from "./store/actions/counter.actions";
 
 @Component({
   selector: 'app-ngrx',
@@ -31,6 +31,10 @@ export class NgrxComponent implements OnInit {
   }
 
   public _setValue(): void {
-    this.store.dispatch(counterSet({value: 20}));
+    this.store.dispatch(counterSet({newValue: 20}));
+  }
+
+  public _loadValue(): void {
+    this.store.dispatch(loadValue());
   }
 }

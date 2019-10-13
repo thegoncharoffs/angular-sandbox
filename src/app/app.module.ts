@@ -9,6 +9,10 @@ import {TabPanelItemComponent} from './components/tab-panel/item/tab-panel-item.
 import {NgrxComponent} from './modules/ngrx/ngrx.component';
 import {StoreModule} from '@ngrx/store';
 import {reducers} from './modules/ngrx/store/reducers/reducers';
+import {EffectsModule} from "@ngrx/effects";
+import {CounterEffects} from "./modules/ngrx/store/effects/counter.effects";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {environment} from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,11 @@ import {reducers} from './modules/ngrx/store/reducers/reducers';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([CounterEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
