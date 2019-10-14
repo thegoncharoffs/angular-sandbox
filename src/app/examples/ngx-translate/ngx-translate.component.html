@@ -1,0 +1,12 @@
+<h2>{{ 'home.title' | translate }}</h2>
+
+<label>
+  {{ 'home.select' | translate }}
+  <select #langSelect (change)="translate.use(langSelect.value)">
+    <option *ngFor="let lang of translate.getLangs()"
+            [value]="lang"
+            [selected]="lang === translate.currentLang">
+      {{lang}}
+    </option>
+  </select>
+</label>

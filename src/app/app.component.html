@@ -71,6 +71,24 @@
       </div>
     </main>
   </tab-panel-item>
+
+  <tab-panel-item
+    [title]="'Localization'"
+  >
+    <main class="app__main">
+      <div class="app__links">
+        <div class="app__column">
+          <a
+            class="app__link"
+            routerLink="/translate"
+            routerLinkActive="_active"
+          >
+            NGX-translate
+          </a>
+        </div>
+      </div>
+    </main>
+  </tab-panel-item>
 </tab-panel>
 
 <router-outlet></router-outlet>

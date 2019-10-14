@@ -9,33 +9,53 @@ import {TabPanelItemComponent} from './components/tab-panel/item/tab-panel-item.
 import {NgrxComponent} from './examples/ngrx/ngrx.component';
 import {StoreModule} from '@ngrx/store';
 import {reducers} from './examples/ngrx/store/reducers/reducers';
-import {EffectsModule} from "@ngrx/effects";
-import {CounterEffects} from "./examples/ngrx/store/effects/counter.effects";
-import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {EffectsModule} from '@ngrx/effects';
+import {CounterEffects} from './examples/ngrx/store/effects/counter.effects';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from 'src/environments/environment';
-import { ObservableComponent } from './examples/observable/observable.component';
+import {ObservableComponent} from './examples/observable/observable.component';
+import {NgxTranslateComponent} from './examples/ngx-translate/ngx-translate.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ExamplesPageComponent,
-    TabPanelComponent,
-    TabPanelItemComponent,
-    NgrxComponent,
-    ObservableComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([CounterEffects]),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25, // Retains last 25 states
-      logOnly: environment.production, // Restrict extension to log-only mode
-    }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ExamplesPageComponent,
+        TabPanelComponent,
+        TabPanelItemComponent,
+        NgrxComponent,
+        ObservableComponent,
+        NgxTranslateComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        // For NGRX
+        StoreModule.forRoot(reducers),
+        EffectsModule.forRoot([CounterEffects]),
+        StoreDevtoolsModule.instrument({
+            maxAge: 25, // Retains last 25 states
+            logOnly: environment.production, // Restrict extension to log-only mode
+        }),
+        // For Localization
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
