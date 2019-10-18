@@ -1,94 +1,33 @@
 <header class="app__header">
 
-  <div class="app__header-logo">
-    <span class="app__header-text">Angular Sandbox</span>
+    <div class="app__header-logo">
+        <span class="app__header-text">Angular Sandbox</span>
 
-    <svg class="app__header-icon"
-         viewBox="0 0 20 20">
-      <use href="#sandbox"></use>
-    </svg>
-  </div>
+        <svg class="app__header-icon"
+             viewBox="0 0 20 20">
+            <use href="#sandbox"></use>
+        </svg>
+    </div>
 
 </header>
 
 <tab-panel>
-  <tab-panel-item
-    [title]="'Angular'"
-  >
-    <main class="app__main">
-      <div class="app__links">
-        <div class="app__column">
-          <a
-            class="app__link"
-            routerLink="/routing"
-            routerLinkActive="_active"
-          >
-            Routing
-          </a>
+    <tab-panel-item
+            *ngFor="let item of _items"
+            [title]="item.title">
+        <div class="app__links">
+            <a class="app__link"
+               *ngFor="let links of item.children"
+               [routerLink]="links.routerLink"
+               routerLinkActive="_active"
+            >
+                {{links.title}}
+            </a>
         </div>
-      </div>
-    </main>
-  </tab-panel-item>
-
-  <tab-panel-item
-    [title]="'SCSS'"
-  >
-    SCSS
-  </tab-panel-item>
-
-  <tab-panel-item
-    [title]="'Redux'"
-  >
-    <main class="app__main">
-      <div class="app__links">
-        <div class="app__column">
-          <a
-            class="app__link"
-            routerLink="/ngrx"
-            routerLinkActive="_active"
-          >
-            NGRX
-          </a>
-        </div>
-      </div>
-    </main>
-  </tab-panel-item>
-
-  <tab-panel-item
-    [title]="'RXJS'"
-  >
-    <main class="app__main">
-      <div class="app__links">
-        <div class="app__column">
-          <a
-            class="app__link"
-            routerLink="/observable"
-            routerLinkActive="_active"
-          >
-            Observable
-          </a>
-        </div>
-      </div>
-    </main>
-  </tab-panel-item>
-
-  <tab-panel-item
-    [title]="'Localization'"
-  >
-    <main class="app__main">
-      <div class="app__links">
-        <div class="app__column">
-          <a
-            class="app__link"
-            routerLink="/translate"
-            routerLinkActive="_active"
-          >
-            NGX-translate
-          </a>
-        </div>
-      </div>
-    </main>
-  </tab-panel-item>
+    </tab-panel-item>
 </tab-panel>
 
-<router-outlet></router-outlet>
+<main class="app__main">
+    <router-outlet></router-outlet>
+</main>
+

@@ -1,51 +1,51 @@
 .tab-panel {
-  display: flex;
-  flex-direction: column;
-
-  &__tabs {
     display: flex;
-    justify-content: center;
-    padding-bottom: 12px;
-    border-bottom: 1px solid grey;
-  }
+    flex-direction: column;
 
-  &__tab {
-    position: relative;
-    margin-right: 60px;
-    cursor: pointer;
-    text-decoration: none;
-    list-style-type: none;
-
-    &._selected {
-      cursor: default;
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 12px;
     }
 
-    &._selected::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -4px;
-      border-bottom: 4px solid grey;
+    &__tab {
+        display: flex;
+        position: relative;
+        margin-right: 60px;
+        cursor: pointer;
+        text-decoration: none;
+        list-style-type: none;
+
+        &._selected {
+            cursor: default;
+        }
+
+        &._selected::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -4px;
+            border-bottom: 4px solid grey;
+        }
+
+        &:hover:not(._selected)::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -4px;
+            border-bottom: 2px solid grey;
+        }
     }
 
-    &:hover:not(._selected)::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -4px;
-      border-bottom: 2px solid grey;
+    &__tab:hover:not(._selected) &__title {
+        transform: translate3d(0, -4px, 0);
     }
-  }
 
-  &__tab:hover:not(._selected) &__title {
-    transform: translate3d(0, -4px, 0);
-  }
-
-  &__title {
-    font-size: 24px;
-    font-family: sans-serif;
-    transition: transform ease 0.2s;
-  }
+    &__title {
+        font-size: 24px;
+        font-family: sans-serif;
+        transition: transform ease 0.2s;
+    }
 }

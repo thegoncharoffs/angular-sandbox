@@ -1,53 +1,78 @@
 .app {
-  &__header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    background-color: grey;
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        background-color: grey;
 
-    &-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        &-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-text {
+            color: white;
+            font-family: sans-serif;
+            margin-right: 16px;
+            font-size: 26px;
+        }
+
+        &-icon {
+            width: 60px;
+            height: 60px;
+            fill: white;
+        }
     }
 
-    &-text {
-      color: white;
-      font-family: sans-serif;
-      margin-right: 16px;
-      font-size: 26px;
+    &__links {
+        display: flex;
+        padding: 10px 60px;
+        border-bottom: 1px solid grey;
     }
 
-    &-icon {
-      width: 60px;
-      height: 60px;
-      fill: white;
+    &__link {
+        color: black;
+        position: relative;
+        transition: transform 0.2s ease;
+        text-decoration: none;
+        text-underline: none;
+
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            transform: translate3d(0, -2px, 0);
+        }
+
+        &._selected::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -4px;
+            border-bottom: 4px solid grey;
+        }
+
+        &:hover:not(._active)::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -4px;
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+        }
+
+        &._active {
+            text-decoration: underline;
+        }
     }
-  }
 
-  &__main {
-    display: flex;
-    flex-direction: column;
-    margin: 60px;
-  }
-
-  &__links {
-    display: flex;
-  }
-
-  &__column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 33.3%;
-  }
-
-  &__link {
-    text-decoration: none;
-
-    &._active {
-      text-decoration: underline;
+    &__main {
+        margin: 10px 60px;
     }
-  }
 }

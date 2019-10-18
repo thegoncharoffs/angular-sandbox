@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ExamplesPageComponent} from './components/examples-page/examples-page.component';
 import {TabPanelComponent} from './components/tab-panel/tab-panel.component';
 import {TabPanelItemComponent} from './components/tab-panel/item/tab-panel-item.component';
 import {NgrxComponent} from './examples/ngrx/ngrx.component';
@@ -27,7 +26,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
     declarations: [
         AppComponent,
-        ExamplesPageComponent,
         TabPanelComponent,
         TabPanelItemComponent,
         NgrxComponent,
