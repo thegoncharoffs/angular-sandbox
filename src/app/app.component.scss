@@ -29,32 +29,28 @@
 
     &__links {
         display: flex;
-        padding: 10px 60px;
+        padding: 20px 60px;
         border-bottom: 1px solid grey;
     }
 
     &__link {
-        color: black;
+        display: flex;
         position: relative;
-        transition: transform 0.2s ease;
+        cursor: pointer;
         text-decoration: none;
-        text-underline: none;
+        list-style-type: none;
 
-        &:visited {
-            color: black;
+        &._active {
+            cursor: default;
         }
 
-        &:hover {
-            transform: translate3d(0, -2px, 0);
-        }
-
-        &._selected::after {
+        &._active::after {
             content: "";
             position: absolute;
             left: 0;
             right: 0;
             bottom: -4px;
-            border-bottom: 4px solid grey;
+            border-bottom: 2px solid grey;
         }
 
         &:hover:not(._active)::after {
@@ -63,16 +59,16 @@
             left: 0;
             right: 0;
             bottom: -4px;
-            border-top: 1px solid grey;
             border-bottom: 1px solid grey;
         }
 
-        &._active {
-            text-decoration: underline;
+        &:hover:not(._active) {
+          transform: translate3d(0, -2px, 0);
         }
     }
 
     &__main {
         margin: 10px 60px;
+        height: 100%;
     }
 }
