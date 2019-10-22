@@ -18,6 +18,8 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { NgTemplateComponent } from './examples/ng-template/ng-template.component';
+import { NgIfComponent } from './examples/ng-if/ng-if.component';
+import { ButtonComponent } from './components/button/button.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -33,6 +35,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         ObservableComponent,
         NgxTranslateComponent,
         NgTemplateComponent,
+        NgIfComponent,
+        ButtonComponent,
     ],
     imports: [
         BrowserModule,

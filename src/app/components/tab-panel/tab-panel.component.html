@@ -1,13 +1,13 @@
 <ul class="tab-panel__tabs">
-  <li *ngFor="let tab of _tabs"
-      class="tab-panel__tab"
-      [ngClass]="{'_selected': tab.selected}"
-      (click)="_selectTab(tab)"
-  >
-    <div class="tab-panel__title">
-      {{tab.title}}
-     </div>
-  </li>
+    <li *ngFor="let tab of _tabs"
+        class="tab-panel__tab"
+        [ngClass]="{'_selected': tab.selected}"
+        (click)="_selectTab(tab)"
+    >
+        <div class="tab-panel__title">
+            {{tab.title}}
+        </div>
+    </li>
 </ul>
 
 <ng-content></ng-content>

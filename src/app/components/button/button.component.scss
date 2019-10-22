@@ -1,0 +1,24 @@
+.app-button {
+    display: inline-flex;
+
+    &__button {
+        display: inline-flex;
+        padding: 8px 8px;
+        border: 2px solid grey;
+        background: #FFFFFF;
+        color: black;
+        border-radius: 4px;
+        outline: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+
+        &:hover {
+            background: #F0F8FC;
+        }
+
+        &:active {
+            background: #EDF1F5;
+            box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.08);
+        }
+    }
+}

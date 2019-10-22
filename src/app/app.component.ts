@@ -35,6 +35,10 @@ export class AppComponent {
                     title: 'ng-template',
                     routerLink: '/ng-template'
                 },
+                {
+                    title: '*ngIf',
+                    routerLink: '/ng-if'
+                },
             ]
         },
         {

@@ -1,0 +1,14 @@
+<app-button
+        style="margin-bottom: 20px"
+        (click)="_click()"
+>
+    Toggle templates
+</app-button>
+
+<div *ngIf="flag else tpl">
+    <div>Template with true value</div>
+</div>
+
+<ng-template #tpl>
+    <div>Template with false value</div>
+</ng-template>
