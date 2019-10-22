@@ -31,6 +31,10 @@ export class AppComponent {
                     title: 'Routing',
                     routerLink: '/routing'
                 },
+                {
+                    title: 'ng-template',
+                    routerLink: '/ng-template'
+                },
             ]
         },
         {

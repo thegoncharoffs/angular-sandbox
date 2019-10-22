@@ -1,0 +1,16 @@
+<ng-container
+        [ngTemplateOutlet]="tpl"
+        [ngTemplateOutletContext]="context"
+>
+</ng-container>
+
+<ng-template
+    #tpl
+    let-value="value"
+    let-name="name"
+>
+    <div>ngTemplateOutlet structural directive instantiates the template</div>
+    <div>ngTemplateOutletContext structural directive sets the context for template</div>
+    <div>value is {{value}}</div>
+    <div>name is {{name}}</div>
+</ng-template>

@@ -17,6 +17,7 @@ import {NgxTranslateComponent} from './examples/ngx-translate/ngx-translate.comp
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { NgTemplateComponent } from './examples/ng-template/ng-template.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         NgrxComponent,
         ObservableComponent,
         NgxTranslateComponent,
+        NgTemplateComponent,
     ],
     imports: [
         BrowserModule,
