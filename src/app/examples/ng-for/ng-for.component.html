@@ -1,0 +1,10 @@
+<app-button (click)="refreshCollection()">New Collection</app-button>
+<app-button (click)="addJohn()">Add John</app-button>
+<app-button (click)="changeOrder()">Change Order</app-button>
+
+<ul>
+    <li *ngFor="let item of items; trackBy: trackByFn">
+<!--        {{item.name}}-->
+        <app-ng-for-mock [name]="item.name"></app-ng-for-mock>
+    </li>
+</ul>

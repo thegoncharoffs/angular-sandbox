@@ -20,6 +20,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { NgTemplateComponent } from './examples/ng-template/ng-template.component';
 import { NgIfComponent } from './examples/ng-if/ng-if.component';
 import { ButtonComponent } from './components/button/button.component';
+import { NgForComponent } from './examples/ng-for/ng-for.component';
+import { NgForMockComponent } from './examples/ng-for/ng-for-mock/ng-for-mock.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -37,6 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         NgTemplateComponent,
         NgIfComponent,
         ButtonComponent,
+        NgForComponent,
+        NgForMockComponent,
     ],
     imports: [
         BrowserModule,
