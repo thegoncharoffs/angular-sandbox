@@ -1,0 +1,8 @@
+<app-button (click)="updateUser()" style="margin-bottom: 20px">Update User</app-button>
+
+<div [ngSwitch]="name">
+    <div *ngSwitchCase="'Boris'">Hello, {{name}}</div>
+    <div *ngSwitchCase="'Pavel'">Hello, {{name}}</div>
+    <div *ngSwitchCase="'Fedor'">Hello, {{name}}</div>
+    <div *ngSwitchDefault>Unknown user</div>
+</div>
