@@ -43,6 +43,10 @@ export class AppComponent {
                     title: '*ngFor',
                     routerLink: '/ng-for'
                 },
+                {
+                    title: '*ngSwitch',
+                    routerLink: '/ng-switch'
+                },
             ]
         },
         {

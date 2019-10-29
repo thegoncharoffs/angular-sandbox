@@ -6,6 +6,7 @@ import {NgxTranslateComponent} from './examples/ngx-translate/ngx-translate.comp
 import {NgTemplateComponent} from './examples/ng-template/ng-template.component';
 import {NgIfComponent} from './examples/ng-if/ng-if.component';
 import {NgForComponent} from "./examples/ng-for/ng-for.component";
+import {NgSwitchComponent} from "./examples/ng-switch/ng-switch.component";
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
         path: 'ng-for',
         component: NgForComponent
+    },
+    {
+        path: 'ng-switch',
+        component: NgSwitchComponent
     },
     {
         path: 'observable',

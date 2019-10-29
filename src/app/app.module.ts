@@ -22,6 +22,7 @@ import { NgIfComponent } from './examples/ng-if/ng-if.component';
 import { ButtonComponent } from './components/button/button.component';
 import { NgForComponent } from './examples/ng-for/ng-for.component';
 import { NgForMockComponent } from './examples/ng-for/ng-for-mock/ng-for-mock.component';
+import { NgSwitchComponent } from './examples/ng-switch/ng-switch.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -41,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         ButtonComponent,
         NgForComponent,
         NgForMockComponent,
+        NgSwitchComponent,
     ],
     imports: [
         BrowserModule,

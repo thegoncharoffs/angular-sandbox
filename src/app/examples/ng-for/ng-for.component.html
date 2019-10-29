@@ -1,6 +1,6 @@
-<app-button (click)="refreshCollection()">New Collection</app-button>
-<app-button (click)="addJohn()">Add John</app-button>
-<app-button (click)="changeOrder()">Change Order</app-button>
+<app-button (click)="refreshCollection()" style="margin-right: 20px">New Collection</app-button>
+<app-button (click)="addJohn()" style="margin-right: 20px">Add John</app-button>
+<app-button (click)="changeOrder()" style="margin-right: 20px">Change Order</app-button>
 
 <ul>
     <li *ngFor="let item of items; trackBy: trackByFn">
