@@ -11,7 +11,7 @@ import {
 import {TabPanelItemComponent} from './item/tab-panel-item.component';
 
 @Component({
-    selector: 'tab-panel',
+    selector: 'app-tab-panel',
     templateUrl: './tab-panel.component.html',
     styleUrls: ['./tab-panel.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
@@ -70,5 +70,4 @@ export class TabPanelComponent implements OnInit, AfterViewInit {
         this.selectedTab.selected = true;
         this.selectedTab.cdr.markForCheck();
     }
-
 }

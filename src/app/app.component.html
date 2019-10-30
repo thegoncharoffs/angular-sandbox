@@ -11,8 +11,8 @@
 
 </header>
 
-<tab-panel>
-    <tab-panel-item
+<app-tab-panel>
+    <app-tab-panel-item
             *ngFor="let item of _items"
             [title]="item.title">
         <div class="app__links">
@@ -24,8 +24,8 @@
                 {{links.title}}
             </div>
         </div>
-    </tab-panel-item>
-</tab-panel>
+    </app-tab-panel-item>
+</app-tab-panel>
 
 <main class="app__main">
     <router-outlet></router-outlet>
