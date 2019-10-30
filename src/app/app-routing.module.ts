@@ -7,6 +7,8 @@ import {NgTemplateComponent} from './examples/ng-template/ng-template.component'
 import {NgIfComponent} from './examples/ng-if/ng-if.component';
 import {NgForComponent} from "./examples/ng-for/ng-for.component";
 import {NgSwitchComponent} from "./examples/ng-switch/ng-switch.component";
+import {FormControl} from '@angular/forms';
+import {FormControlComponent} from './examples/form-control/form-control.component';
 
 
 const routes: Routes = [
@@ -41,6 +43,10 @@ const routes: Routes = [
     {
         path: 'translate',
         component: NgxTranslateComponent
+    },
+    {
+        path: 'form-control',
+        component: FormControlComponent
     },
 ];
 

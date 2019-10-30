@@ -47,6 +47,10 @@ export class AppComponent {
                     title: '*ngSwitch',
                     routerLink: '/ng-switch'
                 },
+                {
+                    title: 'FormControl',
+                    routerLink: '/form-control'
+                },
             ]
         },
         {

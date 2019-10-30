@@ -1,0 +1,14 @@
+.app-text-field {
+    display: inline-flex;
+
+    &__input {
+        height: 32px;
+        background: white;
+        border: 2px solid grey;
+        outline: none;
+
+        &:focus {
+            border-color: black;
+        }
+    }
+}
