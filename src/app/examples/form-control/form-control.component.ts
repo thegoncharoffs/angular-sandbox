@@ -11,16 +11,16 @@ export class FormControlComponent implements OnInit {
 
     public textField = new FormControl('', {updateOn: 'blur'});
 
-    public log: string = 'Some text';
+    public value: string = 'Some text';
 
     constructor(cdr: ChangeDetectorRef) {
     }
 
     ngOnInit() {
-        this.textField.setValue(this.log);
+        this.textField.setValue(this.value);
 
         this.textField.valueChanges.subscribe((value) => {
-            this.log = value;
+            this.value = value;
             console.log(value);
         });
     }
