@@ -51,6 +51,14 @@ export class AppComponent {
                     title: 'FormControl',
                     routerLink: '/form-control'
                 },
+                {
+                    title: 'FormGroup',
+                    routerLink: '/form-group'
+                },
+                {
+                    title: 'FormArray',
+                    routerLink: '/form-array'
+                },
             ]
         },
         {

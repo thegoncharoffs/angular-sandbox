@@ -26,6 +26,8 @@ import {NgForComponent} from './examples/ng-for/ng-for.component';
 import {NgForMockComponent} from './examples/ng-for/ng-for-mock/ng-for-mock.component';
 import {NgSwitchComponent} from './examples/ng-switch/ng-switch.component';
 import { TextFieldComponent } from './components/text-field/text-field.component';
+import { FormGroupComponent } from './examples/form-group/form-group.component';
+import { FormArrayComponent } from './examples/form-array/form-array.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -48,6 +50,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         NgForMockComponent,
         NgSwitchComponent,
         TextFieldComponent,
+        FormGroupComponent,
+        FormArrayComponent,
     ],
     imports: [
         BrowserModule,

@@ -9,6 +9,8 @@ import {NgForComponent} from "./examples/ng-for/ng-for.component";
 import {NgSwitchComponent} from "./examples/ng-switch/ng-switch.component";
 import {FormControl} from '@angular/forms';
 import {FormControlComponent} from './examples/form-control/form-control.component';
+import {FormGroupComponent} from './examples/form-group/form-group.component';
+import {FormArrayComponent} from './examples/form-array/form-array.component';
 
 
 const routes: Routes = [
@@ -47,6 +49,14 @@ const routes: Routes = [
     {
         path: 'form-control',
         component: FormControlComponent
+    },
+    {
+        path: 'form-group',
+        component: FormGroupComponent
+    },
+    {
+        path: 'form-array',
+        component: FormArrayComponent
     },
 ];
 
