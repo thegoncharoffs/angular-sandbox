@@ -12,6 +12,7 @@ import {FormControlComponent} from './examples/form-control/form-control.compone
 import {FormGroupComponent} from './examples/form-group/form-group.component';
 import {FormArrayComponent} from './examples/form-array/form-array.component';
 import {CombineLatestComponent} from './examples/combine-latest/combine-latest.component';
+import {ConcatComponent} from './examples/concat/concat.component';
 
 
 const routes: Routes = [
@@ -62,6 +63,10 @@ const routes: Routes = [
     {
         path: 'combine-latest',
         component: CombineLatestComponent
+    },
+    {
+        path: 'concat',
+        component: ConcatComponent
     },
 ];
 

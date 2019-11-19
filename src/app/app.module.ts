@@ -29,6 +29,7 @@ import { TextFieldComponent } from './components/text-field/text-field.component
 import { FormGroupComponent } from './examples/form-group/form-group.component';
 import { FormArrayComponent } from './examples/form-array/form-array.component';
 import { CombineLatestComponent } from './examples/combine-latest/combine-latest.component';
+import { ConcatComponent } from './examples/concat/concat.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -54,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         FormGroupComponent,
         FormArrayComponent,
         CombineLatestComponent,
+        ConcatComponent,
     ],
     imports: [
         BrowserModule,

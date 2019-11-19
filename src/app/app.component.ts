@@ -85,6 +85,10 @@ export class AppComponent {
                     title: 'combineLatest',
                     routerLink: '/combine-latest'
                 },
+                {
+                    title: 'concat',
+                    routerLink: '/concat'
+                },
             ]
         },
         {
