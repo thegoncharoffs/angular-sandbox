@@ -33,6 +33,7 @@ import { ConcatComponent } from './examples/concat/concat.component';
 import { TakeComponent } from './examples/take/take.component';
 import { IntervalComponent } from './examples/interval/interval.component';
 import { ConcatAllComponent } from './examples/concat-all/concat-all.component';
+import { WithLatestFromComponent } from './examples/with-latest-from/with-latest-from.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -62,6 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         TakeComponent,
         IntervalComponent,
         ConcatAllComponent,
+        WithLatestFromComponent,
     ],
     imports: [
         BrowserModule,

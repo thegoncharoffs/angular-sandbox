@@ -19,5 +19,4 @@ export class IntervalComponent implements OnInit, OnDestroy {
     public ngOnDestroy(): void {
         this.subscription.unsubscribe();
     }
-
 }

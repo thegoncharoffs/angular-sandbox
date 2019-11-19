@@ -102,6 +102,10 @@ export class AppComponent {
                     title: 'concatAll',
                     routerLink: '/concat-all'
                 },
+                {
+                    title: 'withLatestFrom',
+                    routerLink: '/with-latest-from'
+                },
             ]
         },
         {

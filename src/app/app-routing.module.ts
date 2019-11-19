@@ -15,6 +15,7 @@ import {ConcatComponent} from './examples/concat/concat.component';
 import {TakeComponent} from './examples/take/take.component';
 import {IntervalComponent} from './examples/interval/interval.component';
 import {ConcatAllComponent} from './examples/concat-all/concat-all.component';
+import {WithLatestFromComponent} from './examples/with-latest-from/with-latest-from.component';
 
 
 const routes: Routes = [
@@ -81,6 +82,10 @@ const routes: Routes = [
     {
         path: 'concat-all',
         component: ConcatAllComponent
+    },
+    {
+        path: 'with-latest-from',
+        component: WithLatestFromComponent
     },
 ];
 
