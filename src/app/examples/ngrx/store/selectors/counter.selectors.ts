@@ -8,8 +8,3 @@ export const selectCounterValue = createSelector(
   selectCounter,
   (state: CounterState) => state.value
 );
-
-export const selectCounterLabel = createSelector(
-  selectCounter,
-  (state: CounterState) => state.label
-);
