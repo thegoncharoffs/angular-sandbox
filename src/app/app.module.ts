@@ -28,6 +28,7 @@ import {NgSwitchComponent} from './examples/ng-switch/ng-switch.component';
 import { TextFieldComponent } from './components/text-field/text-field.component';
 import { FormGroupComponent } from './examples/form-group/form-group.component';
 import { FormArrayComponent } from './examples/form-array/form-array.component';
+import { CombineLatestComponent } from './examples/combine-latest/combine-latest.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -52,6 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         TextFieldComponent,
         FormGroupComponent,
         FormArrayComponent,
+        CombineLatestComponent,
     ],
     imports: [
         BrowserModule,

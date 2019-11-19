@@ -11,6 +11,7 @@ import {FormControl} from '@angular/forms';
 import {FormControlComponent} from './examples/form-control/form-control.component';
 import {FormGroupComponent} from './examples/form-group/form-group.component';
 import {FormArrayComponent} from './examples/form-array/form-array.component';
+import {CombineLatestComponent} from './examples/combine-latest/combine-latest.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,10 @@ const routes: Routes = [
     {
         path: 'form-array',
         component: FormArrayComponent
+    },
+    {
+        path: 'combine-latest',
+        component: CombineLatestComponent
     },
 ];
 

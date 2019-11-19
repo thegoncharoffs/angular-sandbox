@@ -1,6 +1,5 @@
-<button (click)="_increase()">Increase</button>
-<button (click)="_decrease()">Decrease</button>
-<button (click)="_setValue(20)">Set to 20</button>
-<button (click)="_loadValue()">Load Value</button>
-<div>Current count: {{value$ | async}}<div>
-
+<app-button (click)="_increase()" style="margin-right: 8px">Increase</app-button>
+<app-button (click)="_decrease()" style="margin-right: 8px">Decrease</app-button>
+<app-button (click)="_setValue(20)" style="margin-right: 8px">Set to 20</app-button>
+<app-button (click)="_loadValue()" style="margin-right: 8px">Load Value</app-button>
+<div style="margin-top: 8px">Current count: {{value$ | async}}<div>

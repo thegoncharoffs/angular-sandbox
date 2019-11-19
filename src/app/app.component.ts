@@ -81,6 +81,10 @@ export class AppComponent {
                     title: 'Observable',
                     routerLink: '/observable'
                 },
+                {
+                    title: 'combineLatest',
+                    routerLink: '/combine-latest'
+                },
             ]
         },
         {

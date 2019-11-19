@@ -1,14 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Observable, Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-observable',
     templateUrl: './observable.component.html',
     styleUrls: ['./observable.component.scss']
 })
-export class ObservableComponent implements OnInit {
+export class ObservableComponent implements OnInit, OnDestroy {
 
-    obs = new Observable(sub => {
+    private observable$ = new Observable(sub => {
         // CB works only after subscription
         sub.next(1);
 
@@ -18,15 +18,15 @@ export class ObservableComponent implements OnInit {
         }, 2000);
     });
 
-    constructor() {
-    }
+    private subscription1: Subscription;
+    private subscription2: Subscription;
 
-    ngOnInit() {
+    public ngOnInit(): void {
         console.log("Initialized");
 
         setTimeout(() => {
             console.log("Subscribed");
-            this.obs.subscribe(
+            this.subscription1 = this.observable$.subscribe(
                 (data) => {
                     console.log(data);
                 },
@@ -42,7 +42,7 @@ export class ObservableComponent implements OnInit {
         setTimeout(() => {
             console.log("New subscription");
             // Observable runs again all code
-            this.obs.subscribe(
+            this.subscription2 = this.observable$.subscribe(
                 (data) => {
                     console.log(data);
                 },
@@ -54,5 +54,10 @@ export class ObservableComponent implements OnInit {
                 }
             );
         }, 10000);
+    }
+
+    public ngOnDestroy(): void {
+        this.subscription1 && this.subscription1.unsubscribe();
+        this.subscription2 && this.subscription2.unsubscribe();
     }
 }

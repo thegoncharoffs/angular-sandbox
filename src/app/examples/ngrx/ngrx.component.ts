@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import {AppState} from './store/app.state';
 import {select, Store} from '@ngrx/store';
 import {selectCounterValue} from './store/selectors/counter.selectors';
-import {counterDecrease, counterIncrease, counterSet, counterloadValue} from './store/actions/counter.actions';
+import {counterDecrease, counterIncrease, counterSet, counterLoadValue} from './store/actions/counter.actions';
 
 @Component({
     selector: 'app-ngrx',
@@ -29,6 +29,6 @@ export class NgrxComponent {
     }
 
     public _loadValue(): void {
-        this.store.dispatch(counterloadValue());
+        this.store.dispatch(counterLoadValue());
     }
 }
