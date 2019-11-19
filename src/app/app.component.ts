@@ -75,12 +75,21 @@ export class AppComponent {
             ]
         },
         {
-            title: 'RXJS',
+            title: 'RXJS-creation',
             children: [
                 {
                     title: 'Observable',
                     routerLink: '/observable'
                 },
+                {
+                    title: 'Interval',
+                    routerLink: '/interval'
+                },
+            ]
+        },
+        {
+            title: 'RXJS-combination',
+            children: [
                 {
                     title: 'combineLatest',
                     routerLink: '/combine-latest'
@@ -88,6 +97,19 @@ export class AppComponent {
                 {
                     title: 'concat',
                     routerLink: '/concat'
+                },
+                {
+                    title: 'concatAll',
+                    routerLink: '/concat-all'
+                },
+            ]
+        },
+        {
+            title: 'RXJS-filtering',
+            children: [
+                {
+                    title: 'take',
+                    routerLink: '/take'
                 },
             ]
         },

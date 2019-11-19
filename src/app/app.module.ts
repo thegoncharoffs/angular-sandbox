@@ -30,6 +30,9 @@ import { FormGroupComponent } from './examples/form-group/form-group.component';
 import { FormArrayComponent } from './examples/form-array/form-array.component';
 import { CombineLatestComponent } from './examples/combine-latest/combine-latest.component';
 import { ConcatComponent } from './examples/concat/concat.component';
+import { TakeComponent } from './examples/take/take.component';
+import { IntervalComponent } from './examples/interval/interval.component';
+import { ConcatAllComponent } from './examples/concat-all/concat-all.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -56,6 +59,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         FormArrayComponent,
         CombineLatestComponent,
         ConcatComponent,
+        TakeComponent,
+        IntervalComponent,
+        ConcatAllComponent,
     ],
     imports: [
         BrowserModule,

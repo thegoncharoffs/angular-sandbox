@@ -7,12 +7,14 @@ import {NgTemplateComponent} from './examples/ng-template/ng-template.component'
 import {NgIfComponent} from './examples/ng-if/ng-if.component';
 import {NgForComponent} from "./examples/ng-for/ng-for.component";
 import {NgSwitchComponent} from "./examples/ng-switch/ng-switch.component";
-import {FormControl} from '@angular/forms';
 import {FormControlComponent} from './examples/form-control/form-control.component';
 import {FormGroupComponent} from './examples/form-group/form-group.component';
 import {FormArrayComponent} from './examples/form-array/form-array.component';
 import {CombineLatestComponent} from './examples/combine-latest/combine-latest.component';
 import {ConcatComponent} from './examples/concat/concat.component';
+import {TakeComponent} from './examples/take/take.component';
+import {IntervalComponent} from './examples/interval/interval.component';
+import {ConcatAllComponent} from './examples/concat-all/concat-all.component';
 
 
 const routes: Routes = [
@@ -67,6 +69,18 @@ const routes: Routes = [
     {
         path: 'concat',
         component: ConcatComponent
+    },
+    {
+        path: 'take',
+        component: TakeComponent
+    },
+    {
+        path: 'interval',
+        component: IntervalComponent
+    },
+    {
+        path: 'concat-all',
+        component: ConcatAllComponent
     },
 ];
 
