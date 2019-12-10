@@ -1,0 +1,7 @@
+<app-button (click)="_addItem()">Add new Item</app-button>
+
+<app-query-list-item
+        *ngFor="let item of _items"
+        [value]="item"
+>
+</app-query-list-item>

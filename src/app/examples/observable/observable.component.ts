@@ -1,10 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-observable',
     templateUrl: './observable.component.html',
-    styleUrls: ['./observable.component.scss']
+    styleUrls: ['./observable.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ObservableComponent implements OnInit, OnDestroy {
 

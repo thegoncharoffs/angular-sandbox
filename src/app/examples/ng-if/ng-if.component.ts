@@ -1,9 +1,10 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
     selector: 'app-ng-if',
     templateUrl: './ng-if.component.html',
-    styleUrls: ['./ng-if.component.scss']
+    styleUrls: ['./ng-if.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgIfComponent {
     public flag = true;

@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
     selector: 'app-form-group',
     templateUrl: './form-group.component.html',
-    styleUrls: ['./form-group.component.scss']
+    styleUrls: ['./form-group.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormGroupComponent implements OnInit {
     public profileForm = new FormGroup({

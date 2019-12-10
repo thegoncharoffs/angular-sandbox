@@ -1,11 +1,12 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
 import {combineLatest, Subscription, timer} from 'rxjs';
 import {tap} from 'rxjs/operators';
 
 @Component({
     selector: 'app-combine-latest',
     templateUrl: './combine-latest.component.html',
-    styleUrls: ['./combine-latest.component.scss']
+    styleUrls: ['./combine-latest.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CombineLatestComponent implements OnInit, OnDestroy {
     private combinedTimersObserver: Subscription;

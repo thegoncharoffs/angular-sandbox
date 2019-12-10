@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {AppState} from './store/app.state';
 import {select, Store} from '@ngrx/store';
@@ -8,7 +8,8 @@ import {counterDecrease, counterIncrease, counterSet, counterLoadValue} from './
 @Component({
     selector: 'app-ngrx',
     templateUrl: './ngrx.component.html',
-    styleUrls: ['./ngrx.component.scss']
+    styleUrls: ['./ngrx.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgrxComponent {
     public value$: Observable<number> = this.store.pipe(select(selectCounterValue));

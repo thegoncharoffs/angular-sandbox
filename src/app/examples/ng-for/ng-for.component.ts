@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 export interface Item {
     id: number;
@@ -8,7 +8,8 @@ export interface Item {
 @Component({
     selector: 'app-ng-for',
     templateUrl: './ng-for.component.html',
-    styleUrls: ['./ng-for.component.scss']
+    styleUrls: ['./ng-for.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgForComponent {
 

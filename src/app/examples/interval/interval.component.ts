@@ -1,10 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
 import {interval, Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-interval',
     templateUrl: './interval.component.html',
-    styleUrls: ['./interval.component.scss']
+    styleUrls: ['./interval.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IntervalComponent implements OnInit, OnDestroy {
     private subscription: Subscription;

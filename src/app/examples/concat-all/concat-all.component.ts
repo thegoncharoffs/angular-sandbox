@@ -1,11 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {fromEvent, interval} from 'rxjs';
 import {concatAll, map, take} from 'rxjs/operators';
 
 @Component({
     selector: 'app-concat-all',
     templateUrl: './concat-all.component.html',
-    styleUrls: ['./concat-all.component.scss']
+    styleUrls: ['./concat-all.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConcatAllComponent implements OnInit {
     public ngOnInit(): void {

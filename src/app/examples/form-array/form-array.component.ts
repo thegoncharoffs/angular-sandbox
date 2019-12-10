@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
     selector: 'app-form-array',
     templateUrl: './form-array.component.html',
-    styleUrls: ['./form-array.component.scss']
+    styleUrls: ['./form-array.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormArrayComponent implements OnInit {
 

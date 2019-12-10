@@ -59,6 +59,10 @@ export class AppComponent {
                     title: 'FormArray',
                     routerLink: '/form-array'
                 },
+                {
+                    title: 'QueryList',
+                    routerLink: '/query-list'
+                },
             ]
         },
         {

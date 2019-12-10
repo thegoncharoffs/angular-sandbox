@@ -1,10 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
 import {concat, of, Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-concat',
     templateUrl: './concat.component.html',
-    styleUrls: ['./concat.component.scss']
+    styleUrls: ['./concat.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConcatComponent implements OnInit, OnDestroy {
     private subscription: Subscription;

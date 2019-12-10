@@ -1,11 +1,12 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
 import {map, withLatestFrom} from 'rxjs/operators';
 import {interval, Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-with-latest-from',
     templateUrl: './with-latest-from.component.html',
-    styleUrls: ['./with-latest-from.component.scss']
+    styleUrls: ['./with-latest-from.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WithLatestFromComponent implements OnInit, OnDestroy {
     private subscription: Subscription;

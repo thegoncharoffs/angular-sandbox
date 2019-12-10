@@ -34,6 +34,8 @@ import { TakeComponent } from './examples/take/take.component';
 import { IntervalComponent } from './examples/interval/interval.component';
 import { ConcatAllComponent } from './examples/concat-all/concat-all.component';
 import { WithLatestFromComponent } from './examples/with-latest-from/with-latest-from.component';
+import { QueryListComponent } from './examples/query-list/query-list.component';
+import {QueryListItemComponent} from './examples/query-list/item/query-list-item.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -64,6 +66,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         IntervalComponent,
         ConcatAllComponent,
         WithLatestFromComponent,
+        QueryListComponent,
+        QueryListItemComponent,
     ],
     imports: [
         BrowserModule,

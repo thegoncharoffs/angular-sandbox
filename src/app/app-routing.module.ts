@@ -16,6 +16,7 @@ import {TakeComponent} from './examples/take/take.component';
 import {IntervalComponent} from './examples/interval/interval.component';
 import {ConcatAllComponent} from './examples/concat-all/concat-all.component';
 import {WithLatestFromComponent} from './examples/with-latest-from/with-latest-from.component';
+import {QueryListComponent} from './examples/query-list/query-list.component';
 
 
 const routes: Routes = [
@@ -86,6 +87,10 @@ const routes: Routes = [
     {
         path: 'with-latest-from',
         component: WithLatestFromComponent
+    },
+    {
+        path: 'query-list',
+        component: QueryListComponent
     },
 ];
 
