@@ -6,6 +6,7 @@
     "start": "ng serve -o",
     "hmr": "ng serve --configuration hmr -o",
     "build": "ng build",
+    "server": "nodemon server/server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

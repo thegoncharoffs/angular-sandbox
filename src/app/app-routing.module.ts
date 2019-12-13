@@ -17,6 +17,7 @@ import {IntervalComponent} from './examples/interval/interval.component';
 import {ConcatAllComponent} from './examples/concat-all/concat-all.component';
 import {WithLatestFromComponent} from './examples/with-latest-from/with-latest-from.component';
 import {QueryListComponent} from './examples/query-list/query-list.component';
+import {MocksComponent} from './examples/mocks/mocks.component';
 
 
 const routes: Routes = [
@@ -91,6 +92,10 @@ const routes: Routes = [
     {
         path: 'query-list',
         component: QueryListComponent
+    },
+    {
+        path: 'mocks',
+        component: MocksComponent
     },
 ];
 

@@ -36,6 +36,8 @@ import { ConcatAllComponent } from './examples/concat-all/concat-all.component';
 import { WithLatestFromComponent } from './examples/with-latest-from/with-latest-from.component';
 import { QueryListComponent } from './examples/query-list/query-list.component';
 import {QueryListItemComponent} from './examples/query-list/item/query-list-item.component';
+import { MocksComponent } from './examples/mocks/mocks.component';
+import { BooksService } from './services/books.service';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -68,6 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         WithLatestFromComponent,
         QueryListComponent,
         QueryListItemComponent,
+        MocksComponent,
     ],
     imports: [
         BrowserModule,
@@ -90,7 +93,7 @@ export function HttpLoaderFactory(http: HttpClient) {
             }
         })
     ],
-    providers: [],
+    providers: [BooksService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
