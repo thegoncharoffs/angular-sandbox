@@ -18,6 +18,7 @@ import {ConcatAllComponent} from './examples/concat-all/concat-all.component';
 import {WithLatestFromComponent} from './examples/with-latest-from/with-latest-from.component';
 import {QueryListComponent} from './examples/query-list/query-list.component';
 import {MocksComponent} from './examples/mocks/mocks.component';
+import { PromiseComponent } from './examples/promise/promise.component';
 
 
 const routes: Routes = [
@@ -96,6 +97,10 @@ const routes: Routes = [
     {
         path: 'mocks',
         component: MocksComponent
+    },
+    {
+        path: 'promise',
+        component: PromiseComponent
     },
 ];
 

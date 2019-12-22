@@ -70,6 +70,15 @@ export class AppComponent {
             children: []
         },
         {
+            title: 'Plain JS',
+            children: [
+                {
+                    title: 'Promise',
+                    routerLink: '/promise'
+                },
+            ]
+        },
+        {
             title: 'Redux',
             children: [
                 {

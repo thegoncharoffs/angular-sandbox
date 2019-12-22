@@ -38,6 +38,7 @@ import { QueryListComponent } from './examples/query-list/query-list.component';
 import {QueryListItemComponent} from './examples/query-list/item/query-list-item.component';
 import { MocksComponent } from './examples/mocks/mocks.component';
 import { BooksService } from './services/books.service';
+import { PromiseComponent } from './examples/promise/promise.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -71,6 +72,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         QueryListComponent,
         QueryListItemComponent,
         MocksComponent,
+        PromiseComponent,
     ],
     imports: [
         BrowserModule,
