@@ -63,6 +63,10 @@ export class AppComponent {
                     title: 'QueryList',
                     routerLink: '/query-list'
                 },
+                {
+                    title: 'BrowserValidator',
+                    routerLink: '/browser-validator'
+                },
             ]
         },
         {

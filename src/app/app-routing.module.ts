@@ -19,6 +19,7 @@ import {WithLatestFromComponent} from './examples/with-latest-from/with-latest-f
 import {QueryListComponent} from './examples/query-list/query-list.component';
 import {MocksComponent} from './examples/mocks/mocks.component';
 import { PromiseComponent } from './examples/promise/promise.component';
+import {BrowserValidatorComponent} from './examples/browser-validator/browser-validator.component';
 
 
 const routes: Routes = [
@@ -102,10 +103,16 @@ const routes: Routes = [
         path: 'promise',
         component: PromiseComponent
     },
+    {
+        path: 'browser-validator',
+        component: BrowserValidatorComponent
+    },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {
+        initialNavigation: 'enabled'
+    })],
     exports: [RouterModule]
 })
 export class AppRoutingModule {

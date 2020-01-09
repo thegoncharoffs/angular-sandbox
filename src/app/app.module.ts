@@ -39,6 +39,7 @@ import {QueryListItemComponent} from './examples/query-list/item/query-list-item
 import { MocksComponent } from './examples/mocks/mocks.component';
 import { BooksService } from './services/books.service';
 import { PromiseComponent } from './examples/promise/promise.component';
+import { BrowserValidatorComponent } from './examples/browser-validator/browser-validator.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -73,9 +74,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         QueryListItemComponent,
         MocksComponent,
         PromiseComponent,
+        BrowserValidatorComponent,
     ],
     imports: [
-        BrowserModule,
+        BrowserModule.withServerTransition({ appId: 'serverApp' }),
         AppRoutingModule,
         ReactiveFormsModule,
         // For NGRX

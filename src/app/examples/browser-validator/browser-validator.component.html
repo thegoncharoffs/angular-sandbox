@@ -1,0 +1,11 @@
+<span> 53 percent of mobile site visits are abandoned if pages take longer than 3 seconds to load.</span>
+<span> Server-side applications can't reference browser-only global objects such as window, document, navigator, or
+    location. </span>
+
+
+<h1 *ngIf="_isBrowser else server">
+    Platform is Browser
+</h1>
+<ng-template #server>
+    <h1>Platform is Server</h1>
+</ng-template>

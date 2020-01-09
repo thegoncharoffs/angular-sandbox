@@ -58,7 +58,8 @@ export class TabPanelComponent implements OnInit, AfterViewInit {
         this.cdr.detectChanges();
     };
 
-    private _selectTab(tab: TabPanelItemComponent): void {
+    /** @internal */
+    public _selectTab(tab: TabPanelItemComponent): void {
         if (tab === this.selectedTab) {
             return;
         }
