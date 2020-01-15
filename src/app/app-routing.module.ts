@@ -5,8 +5,8 @@ import {ObservableComponent} from './examples/observable/observable.component';
 import {NgxTranslateComponent} from './examples/ngx-translate/ngx-translate.component';
 import {NgTemplateComponent} from './examples/ng-template/ng-template.component';
 import {NgIfComponent} from './examples/ng-if/ng-if.component';
-import {NgForComponent} from "./examples/ng-for/ng-for.component";
-import {NgSwitchComponent} from "./examples/ng-switch/ng-switch.component";
+import {NgForComponent} from './examples/ng-for/ng-for.component';
+import {NgSwitchComponent} from './examples/ng-switch/ng-switch.component';
 import {FormControlComponent} from './examples/form-control/form-control.component';
 import {FormGroupComponent} from './examples/form-group/form-group.component';
 import {FormArrayComponent} from './examples/form-array/form-array.component';
@@ -18,11 +18,20 @@ import {ConcatAllComponent} from './examples/concat-all/concat-all.component';
 import {WithLatestFromComponent} from './examples/with-latest-from/with-latest-from.component';
 import {QueryListComponent} from './examples/query-list/query-list.component';
 import {MocksComponent} from './examples/mocks/mocks.component';
-import { PromiseComponent } from './examples/promise/promise.component';
+import {PromiseComponent} from './examples/promise/promise.component';
 import {BrowserValidatorComponent} from './examples/browser-validator/browser-validator.component';
+import {AuthGuard} from './examples/admin/auth.guard';
+import {AdminComponent} from './examples/admin/admin.component';
+import {DiscardGuard} from './examples/admin/discard.guard';
 
 
 const routes: Routes = [
+    {
+        path: 'admin',
+        canActivate: [AuthGuard],
+        canDeactivate: [DiscardGuard],
+        component: AdminComponent,
+    },
     {
         path: 'routing',
         loadChildren: () => import(`./examples/routing/routing.module`).then(m => m.RoutingModule)

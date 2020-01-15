@@ -27,6 +27,7 @@ export class AppComponent {
         {
             title: 'Angular',
             children: [
+
                 {
                     title: 'Routing',
                     routerLink: '/routing'
@@ -66,6 +67,10 @@ export class AppComponent {
                 {
                     title: 'BrowserValidator',
                     routerLink: '/browser-validator'
+                },
+                {
+                    title: 'Guards',
+                    routerLink: '/admin'
                 },
             ]
         },

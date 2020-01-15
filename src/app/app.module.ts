@@ -40,6 +40,7 @@ import { MocksComponent } from './examples/mocks/mocks.component';
 import { BooksService } from './services/books.service';
 import { PromiseComponent } from './examples/promise/promise.component';
 import { BrowserValidatorComponent } from './examples/browser-validator/browser-validator.component';
+import { AdminComponent } from './examples/admin/admin.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -75,6 +76,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         MocksComponent,
         PromiseComponent,
         BrowserValidatorComponent,
+        AdminComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),
