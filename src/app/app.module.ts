@@ -41,6 +41,8 @@ import { BooksService } from './services/books.service';
 import { PromiseComponent } from './examples/promise/promise.component';
 import { BrowserValidatorComponent } from './examples/browser-validator/browser-validator.component';
 import { AdminComponent } from './examples/admin/admin.component';
+import { SubjectComponent } from './examples/subject/subject.component';
+import { MulticastObservableComponent } from './examples/multicast-observable/multicast-observable.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -77,6 +79,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         PromiseComponent,
         BrowserValidatorComponent,
         AdminComponent,
+        SubjectComponent,
+        MulticastObservableComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),

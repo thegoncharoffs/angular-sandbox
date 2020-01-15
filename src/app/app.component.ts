@@ -104,6 +104,14 @@ export class AppComponent {
                     routerLink: '/observable'
                 },
                 {
+                    title: 'Subject',
+                    routerLink: '/subject'
+                },
+                {
+                    title: 'Multicast Observable',
+                    routerLink: '/multicast-observable'
+                },
+                {
                     title: 'Interval',
                     routerLink: '/interval'
                 },

@@ -23,6 +23,8 @@ import {BrowserValidatorComponent} from './examples/browser-validator/browser-va
 import {AuthGuard} from './examples/admin/auth.guard';
 import {AdminComponent} from './examples/admin/admin.component';
 import {DiscardGuard} from './examples/admin/discard.guard';
+import {SubjectComponent} from './examples/subject/subject.component';
+import {MulticastObservableComponent} from './examples/multicast-observable/multicast-observable.component';
 
 
 const routes: Routes = [
@@ -116,6 +118,14 @@ const routes: Routes = [
         path: 'browser-validator',
         component: BrowserValidatorComponent
     },
+    {
+        path: 'subject',
+        component: SubjectComponent
+    },
+    {
+        path: 'multicast-observable',
+        component: MulticastObservableComponent
+    }
 ];
 
 @NgModule({
