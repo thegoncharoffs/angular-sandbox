@@ -43,6 +43,9 @@ import { BrowserValidatorComponent } from './examples/browser-validator/browser-
 import { AdminComponent } from './examples/admin/admin.component';
 import { SubjectComponent } from './examples/subject/subject.component';
 import { MulticastObservableComponent } from './examples/multicast-observable/multicast-observable.component';
+import { BehaviorSubjectComponent } from './examples/behavior-subject/behavior-subject.component';
+import { ReplaySubjectComponent } from './examples/replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './examples/async-subject/async-subject.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -81,6 +84,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         AdminComponent,
         SubjectComponent,
         MulticastObservableComponent,
+        BehaviorSubjectComponent,
+        ReplaySubjectComponent,
+        AsyncSubjectComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),

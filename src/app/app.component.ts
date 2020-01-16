@@ -112,6 +112,18 @@ export class AppComponent {
                     routerLink: '/multicast-observable'
                 },
                 {
+                    title: 'Behavior Subject',
+                    routerLink: '/behavior-subject'
+                },
+                {
+                    title: 'Replay Subject',
+                    routerLink: '/replay-subject'
+                },
+                {
+                    title: 'Async Subject',
+                    routerLink: '/async-subject'
+                },
+                {
                     title: 'Interval',
                     routerLink: '/interval'
                 },

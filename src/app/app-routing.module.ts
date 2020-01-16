@@ -25,6 +25,9 @@ import {AdminComponent} from './examples/admin/admin.component';
 import {DiscardGuard} from './examples/admin/discard.guard';
 import {SubjectComponent} from './examples/subject/subject.component';
 import {MulticastObservableComponent} from './examples/multicast-observable/multicast-observable.component';
+import {BehaviorSubjectComponent} from './examples/behavior-subject/behavior-subject.component';
+import {ReplaySubjectComponent} from './examples/replay-subject/replay-subject.component';
+import {AsyncSubjectComponent} from './examples/async-subject/async-subject.component';
 
 
 const routes: Routes = [
@@ -125,6 +128,18 @@ const routes: Routes = [
     {
         path: 'multicast-observable',
         component: MulticastObservableComponent
+    },
+    {
+        path: 'behavior-subject',
+        component: BehaviorSubjectComponent
+    },
+    {
+        path: 'replay-subject',
+        component: ReplaySubjectComponent
+    },
+    {
+        path: 'async-subject',
+        component: AsyncSubjectComponent
     }
 ];
 
