@@ -27,7 +27,10 @@ export class AppComponent {
         {
             title: 'Angular',
             children: [
-
+                {
+                    title: 'Parent & Children',
+                    routerLink: '/parent'
+                },
                 {
                     title: 'Routing',
                     routerLink: '/routing'

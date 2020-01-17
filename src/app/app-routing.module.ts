@@ -28,6 +28,7 @@ import {MulticastObservableComponent} from './examples/multicast-observable/mult
 import {BehaviorSubjectComponent} from './examples/behavior-subject/behavior-subject.component';
 import {ReplaySubjectComponent} from './examples/replay-subject/replay-subject.component';
 import {AsyncSubjectComponent} from './examples/async-subject/async-subject.component';
+import {ParentComponent} from './examples/parent/parent.component';
 
 
 const routes: Routes = [
@@ -140,7 +141,11 @@ const routes: Routes = [
     {
         path: 'async-subject',
         component: AsyncSubjectComponent
-    }
+    },
+    {
+        path: 'parent',
+        component: ParentComponent
+    },
 ];
 
 @NgModule({
