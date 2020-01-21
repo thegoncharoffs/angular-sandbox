@@ -4,3 +4,11 @@
         <div #divElement> some icon </div>
     </app-child2>
 </app-child1>
+
+
+<ng-container [ngTemplateOutlet]="itemTemplate"
+></ng-container>
+
+<ng-template #itemTemplate>
+    <div #anotherDiv></div>
+</ng-template>

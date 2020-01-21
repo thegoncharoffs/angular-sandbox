@@ -1,24 +1,24 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {BooksModel} from '../models/books.model';
+import {map} from 'rxjs/operators';
 
 @Injectable()
 export class BooksService {
 
-    constructor(private http: HttpClient) {
-    }
+	constructor(private httpClient: HttpClient) {
+	}
 
-    private baseUrl: string = 'http://localhost:8080';
+	private baseUrl: string = 'http://localhost:8080';
 
-    public getAllBooks(): Observable<BooksModel> {
-        return this.http.get<BooksModel>(this.baseUrl + 'books/all');
-    }
+	public getAllBooks(): Observable<any> {
+		return this.httpClient.get(this.baseUrl + '/books/all');
+	}
 
-    public getBookById(id: string): Observable<BooksModel> {
-        const params = new HttpParams()
-            .set('id', id);
+	public getBookById(id: string): Observable<string> {
+		const params = new HttpParams()
+			.set('id', id);
 
-        return this.http.get<BooksModel>(this.baseUrl + 'books',{params});
-    }
+		return this.httpClient.get<string>(this.baseUrl + '/books', {params});
+	}
 }

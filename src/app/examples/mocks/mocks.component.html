@@ -1,2 +1,6 @@
 <app-button (click)="_loadMocks()">Load Mocks</app-button>
-{{mocks$ | async}}
+<ul>
+    <li *ngFor="let book of books$ | async">
+        {{book.title}}
+    </li>
+</ul>

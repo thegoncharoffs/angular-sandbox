@@ -41,7 +41,7 @@ app.get(root + 'pattern/:id([0-9]{5})', (req, res) => { // You can also use rege
 });
 
 // Outer routes in things.js
-const things = require('./books.js'); // Other file containing other routes
+const things = require('./routers/books.js'); // Other file containing other routes
 app.use(root + 'things', things); // The app.use function call on route '/things' attaches the things router with this route
 
 // Other routes here

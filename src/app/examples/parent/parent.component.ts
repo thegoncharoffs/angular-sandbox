@@ -9,6 +9,9 @@ export class ParentComponent implements OnInit, AfterViewInit, OnDestroy {
     @ViewChild('divElement', {static: false})
     public divElement: ElementRef;
 
+    @ViewChild('anotherDiv', {static: false})
+    public anotherDiv: ElementRef;
+
     constructor() {
     }
 

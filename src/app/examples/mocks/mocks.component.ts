@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {Observable} from 'rxjs';
-import {BooksModel} from '../../models/books.model';
 import {BooksService} from '../../services/books.service';
 
 @Component({
@@ -10,13 +9,13 @@ import {BooksService} from '../../services/books.service';
 })
 export class MocksComponent {
 
-    public mocks$: Observable<BooksModel>;
+    public books$: Observable<any>;
 
     constructor(private bookService: BooksService) {
     }
 
     public _loadMocks() {
-        this.mocks$ = this.bookService.getAllBooks();
+        this.books$ = this.bookService.getAllBooks();
     }
 
 }
