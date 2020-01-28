@@ -13,11 +13,10 @@ let PAGES = [
     'ng-if',
     'ng-template'
 ];
-let RENDERED_PAGES = [];
 
 async function main() {
 
-    // Starting an Express.js server to serve the static files while puppeter prerender the pages
+    // Starting an Express.js server to serve the static files while puppeteer prerender the pages
     const app = express();
 
     // Getting the html content from the index.html file
@@ -65,18 +64,6 @@ async function main() {
 
         // Write the rendered html file
         await writeFile(file, `<!doctype html> \n ${result}`);
-
-        //console.log(`Writed ${file}`);
-
-        // Add this page to the RENDERED PAGES array
-        // RENDERED_PAGES = [...RENDERED_PAGES, p];
-
-        // Set PAGES with the pages that still need to be rendered
-        // PAGES = difference(
-        //     uniq(PAGES.concat(result.match(/href="\/[\/\w\d\-]*"/g).map(s => s.match(/\/([\/\w\d\-]*)/)[1]))),
-        //     RENDERED_PAGES
-        // );
-
     }
 
     // Closes Chromium and finishes the express server.
