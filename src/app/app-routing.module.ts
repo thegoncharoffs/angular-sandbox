@@ -29,6 +29,8 @@ import {BehaviorSubjectComponent} from './examples/behavior-subject/behavior-sub
 import {ReplaySubjectComponent} from './examples/replay-subject/replay-subject.component';
 import {AsyncSubjectComponent} from './examples/async-subject/async-subject.component';
 import {ParentComponent} from './examples/parent/parent.component';
+import {SwitchMapComponent} from './examples/switch-map/switch-map.component';
+import {MergeMapComponent} from './examples/merge-map/merge-map.component';
 
 
 const routes: Routes = [
@@ -145,6 +147,14 @@ const routes: Routes = [
     {
         path: 'parent',
         component: ParentComponent
+    },
+    {
+        path: 'switch-map',
+        component: SwitchMapComponent
+    },
+    {
+        path: 'merge-map',
+        component: MergeMapComponent
     },
 ];
 

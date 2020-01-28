@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const express = require('express');
-const { join, dirname } = require('path');
-const { readFile, exists, writeFile, mkdir } = require('mz/fs');
+const {join, dirname} = require('path');
+const {readFile, exists, writeFile, mkdir} = require('mz/fs');
 
 // Defining some configuration
 const PORT = 4000;
@@ -23,10 +23,13 @@ async function main() {
     const index = (await readFile(join(process.cwd(), 'dist/browser', 'index.html'))).toString();
 
     // Serving the static files.
-    app.get('*.*', express.static(join(process.cwd(), 'dist/browser')));
+    app.use(express.static(join(process.cwd(), 'dist/browser')));
 
-    // Serving index.html, when a puppeters request the index page
-    app.get('*', (req, res) => res.send(index));
+    // Serving index.html, when a puppeters request the index page is not prerendered
+    app.get('*', async (req, res) => {
+        console.log(req.url);
+        res.send(index)
+    });
 
     // Starting the express server
     const server = await (new Promise((resolve, reject) => {
@@ -48,7 +51,7 @@ async function main() {
 
         // Requesting the first page in PAGES array
         await page.goto(`${HOST}/${p}`);
-        await page.waitFor(1000);
+        // await page.waitFor(1000);
 
         // Getting the html content after the Chromium finish rendering.
         const result = await page.evaluate(() => document.documentElement.outerHTML);

@@ -49,6 +49,8 @@ import {AsyncSubjectComponent} from './examples/async-subject/async-subject.comp
 import {ParentComponent} from './examples/parent/parent.component';
 import {Child2Component} from './examples/parent/child2/child2.component';
 import {Child1Component} from './examples/parent/child1/child1.component';
+import { SwitchMapComponent } from './examples/switch-map/switch-map.component';
+import { MergeMapComponent } from './examples/merge-map/merge-map.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -93,6 +95,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 		ParentComponent,
 		Child2Component,
 		Child1Component,
+		SwitchMapComponent,
+		MergeMapComponent,
 	],
 	imports: [
 		BrowserModule.withServerTransition({appId: 'serverApp'}),

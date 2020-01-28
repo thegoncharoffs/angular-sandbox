@@ -151,6 +151,14 @@ export class AppComponent {
                     title: 'withLatestFrom',
                     routerLink: '/with-latest-from'
                 },
+                {
+                    title: 'switchMap',
+                    routerLink: '/switch-map'
+                },
+                {
+                    title: 'mergeMap',
+                    routerLink: '/merge-map'
+                },
             ]
         },
         {
