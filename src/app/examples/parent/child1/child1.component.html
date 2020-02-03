@@ -1,2 +1,5 @@
-{{!!divElement}}
-<ng-content></ng-content>
+<ng-container
+        [ngTemplateOutlet]="template"
+        [ngTemplateOutletContext]="ctx"
+>
+</ng-container>

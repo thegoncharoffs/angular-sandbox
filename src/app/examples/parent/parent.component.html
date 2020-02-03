@@ -1,14 +1,9 @@
-{{!!divElement}}
-<app-child1>
-    <app-child2>
-        <div #divElement> some icon </div>
-    </app-child2>
+<app-child1
+    [template]="itemTemplate"
+>
 </app-child1>
 
-
-<ng-container [ngTemplateOutlet]="itemTemplate"
-></ng-container>
-
 <ng-template #itemTemplate>
-    <div #anotherDiv></div>
+    {{someText}}
+    <app-text-field (input)="_onInput($event)"></app-text-field>
 </ng-template>

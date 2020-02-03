@@ -18,7 +18,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 export class TextFieldComponent implements ControlValueAccessor {
 
     @Input()
-    public value: string;
+    public value: string = '';
 
     @Input()
     public disabled: boolean;
@@ -29,22 +29,26 @@ export class TextFieldComponent implements ControlValueAccessor {
     @Output()
     public focus: EventEmitter<Event> = new EventEmitter();
 
+    @Output()
+    public input: EventEmitter<string> = new EventEmitter();
+
     /** @internal */
     public _input(event: Event) {
-        this.value = (<HTMLInputElement> event.target).value;
-        this.propagateChange(this.value);
+        this.value = (event.target as HTMLInputElement).value;
+        this.input.emit(this.value);
+        this.propagateChange && this.propagateChange(this.value);
     }
 
     /** @internal */
     public _focus(event: Event) {
         this.focus.emit(event);
-        this.propagateTouch();
+        this.propagateTouch && this.propagateTouch();
     }
 
     /** @internal */
     public _blur(event: Event) {
         this.blur.emit(event);
-        this.propagateTouch();
+        this.propagateTouch && this.propagateTouch();
     }
 
     constructor(public cdr: ChangeDetectorRef) {

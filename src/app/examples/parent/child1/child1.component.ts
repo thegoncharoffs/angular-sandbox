@@ -1,4 +1,13 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, ContentChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ContentChild,
+  Input,
+  TemplateRef
+} from '@angular/core';
 
 @Component({
   selector: 'app-child1',
@@ -9,6 +18,13 @@ export class Child1Component implements OnInit, AfterViewInit, OnDestroy {
   @ContentChild('divElement', {static: false})
   public divElement: ElementRef;
 
+  @Input()
+  public template: TemplateRef<any>;
+
+  public ctx = {value: 'value'};
+
+  public someText = 'Some Text2';
+
   constructor() {
   }
 
@@ -16,7 +32,7 @@ export class Child1Component implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public ngAfterViewInit(): void {
-    console.log('Child1: ', this.divElement && this.divElement.nativeElement);
+    // console.log('Child1: ', this.divElement && this.divElement.nativeElement);
   }
 
   public ngOnDestroy(): void {
