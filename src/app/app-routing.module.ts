@@ -31,6 +31,7 @@ import {AsyncSubjectComponent} from './examples/async-subject/async-subject.comp
 import {ParentComponent} from './examples/parent/parent.component';
 import {SwitchMapComponent} from './examples/switch-map/switch-map.component';
 import {MergeMapComponent} from './examples/merge-map/merge-map.component';
+import { ShareComponent } from "./examples/share/share.component";
 
 
 const routes: Routes = [
@@ -155,6 +156,10 @@ const routes: Routes = [
     {
         path: 'merge-map',
         component: MergeMapComponent
+    },
+    {
+        path: 'share',
+        component: ShareComponent
     },
 ];
 

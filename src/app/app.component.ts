@@ -130,6 +130,10 @@ export class AppComponent {
                     title: 'Interval',
                     routerLink: '/interval'
                 },
+                {
+                    title: 'Observable (hot with share)',
+                    routerLink: '/share'
+                },
             ]
         },
         {

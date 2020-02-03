@@ -24,7 +24,7 @@ export class SubjectComponent implements OnInit, OnDestroy {
 
         this.subject.next(1);
         this.subject.next(2);
-
+        this.subject.complete();
         // Logs:
         // observerA: 1
         // observerB: 1
@@ -34,5 +34,6 @@ export class SubjectComponent implements OnInit, OnDestroy {
 
     public ngOnDestroy(): void {
         this.subject.unsubscribe();
+
     }
 }

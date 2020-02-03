@@ -51,6 +51,7 @@ import {Child2Component} from './examples/parent/child2/child2.component';
 import {Child1Component} from './examples/parent/child1/child1.component';
 import { SwitchMapComponent } from './examples/switch-map/switch-map.component';
 import { MergeMapComponent } from './examples/merge-map/merge-map.component';
+import { ShareComponent } from './examples/share/share.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -97,6 +98,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		Child1Component,
 		SwitchMapComponent,
 		MergeMapComponent,
+		ShareComponent,
 	],
 	imports: [
 		BrowserModule.withServerTransition({appId: 'serverApp'}),

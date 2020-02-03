@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
-import {Observable, Subscription} from 'rxjs';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-observable',
@@ -10,38 +10,38 @@ import {Observable, Subscription} from 'rxjs';
 export class ObservableComponent implements OnInit, OnDestroy {
 
     private observable$ = new Observable(sub => {
+        console.log("Subscriber subscribed");
         // CB works only after subscription
-        sub.next(1);
+        sub.next('First value');
 
         setTimeout(() => {
-            sub.next(3);
+            sub.next('Second value');
             sub.complete();
         }, 2000);
+
+        return () => {
+            console.log('Unsubscribed');
+        };
     });
 
     private subscription1: Subscription;
     private subscription2: Subscription;
 
     public ngOnInit(): void {
-        console.log("Initialized");
+
+        this.subscription1 = this.observable$.subscribe(
+            (data) => {
+                console.log(data);
+            },
+            (error) => {
+                console.log(error);
+            },
+            () => {
+                console.log("Completed");
+            });
+
 
         setTimeout(() => {
-            console.log("Subscribed");
-            this.subscription1 = this.observable$.subscribe(
-                (data) => {
-                    console.log(data);
-                },
-                (error) => {
-                    console.log(error);
-                },
-                () => {
-                    console.log("Completed");
-                }
-            );
-        }, 1000);
-
-        setTimeout(() => {
-            console.log("New subscription");
             // Observable runs again all code
             this.subscription2 = this.observable$.subscribe(
                 (data) => {
