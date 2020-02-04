@@ -52,6 +52,8 @@ import {Child1Component} from './examples/parent/child1/child1.component';
 import { SwitchMapComponent } from './examples/switch-map/switch-map.component';
 import { MergeMapComponent } from './examples/merge-map/merge-map.component';
 import { ShareComponent } from './examples/share/share.component';
+import { DynamicComponent } from './examples/dynamic/dynamic.component';
+import { AlertComponent } from './examples/dynamic/alert/alert.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -99,6 +101,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 		SwitchMapComponent,
 		MergeMapComponent,
 		ShareComponent,
+		DynamicComponent,
+		AlertComponent,
 	],
 	imports: [
 		BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -122,7 +126,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 		})
 	],
 	providers: [BooksService],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+	entryComponents: [AlertComponent],
 })
 export class AppModule {
 }

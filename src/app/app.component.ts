@@ -75,6 +75,10 @@ export class AppComponent {
                     title: 'Guards',
                     routerLink: '/admin'
                 },
+                {
+                    title: 'Dynamic Component',
+                    routerLink: '/dynamic'
+                },
             ]
         },
         {

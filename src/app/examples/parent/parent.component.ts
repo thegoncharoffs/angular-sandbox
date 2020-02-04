@@ -5,22 +5,9 @@ import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from
     templateUrl: './parent.component.html',
     styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit, AfterViewInit, OnDestroy {
+export class ParentComponent {
 
     public someText = 'Some Text';
-
-    constructor() {
-    }
-
-    public ngOnInit(): void {
-    }
-
-    public ngAfterViewInit(): void {
-    }
-
-    public ngOnDestroy(): void {
-
-    }
 
     public _onInput(event: string) {
         console.log(event);

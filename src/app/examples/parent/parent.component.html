@@ -3,7 +3,10 @@
 >
 </app-child1>
 
-<ng-template #itemTemplate>
+<ng-template #itemTemplate let-value1="value1" let-value2="value2">
     {{someText}}
-    <app-text-field (input)="_onInput($event)"></app-text-field>
+    {{value1}}
+    {{value2}}
+    <app-text-field (input)="_onInput($event)">
+    </app-text-field>
 </ng-template>

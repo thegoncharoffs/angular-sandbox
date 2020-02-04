@@ -32,6 +32,7 @@ import {ParentComponent} from './examples/parent/parent.component';
 import {SwitchMapComponent} from './examples/switch-map/switch-map.component';
 import {MergeMapComponent} from './examples/merge-map/merge-map.component';
 import { ShareComponent } from "./examples/share/share.component";
+import { DynamicComponent } from "./examples/dynamic/dynamic.component";
 
 
 const routes: Routes = [
@@ -160,6 +161,10 @@ const routes: Routes = [
     {
         path: 'share',
         component: ShareComponent
+    },
+    {
+        path: 'dynamic',
+        component: DynamicComponent
     },
 ];
 
