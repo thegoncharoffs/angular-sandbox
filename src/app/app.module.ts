@@ -11,7 +11,6 @@ import {reducers} from './examples/ngrx/store/reducers/reducers';
 import {EffectsModule} from '@ngrx/effects';
 import {CounterEffects} from './examples/ngrx/store/effects/counter.effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {environment} from 'src/environments/environment';
 import {ObservableComponent} from './examples/observable/observable.component';
 import {NgxTranslateComponent} from './examples/ngx-translate/ngx-translate.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
@@ -54,6 +53,8 @@ import { MergeMapComponent } from './examples/merge-map/merge-map.component';
 import { ShareComponent } from './examples/share/share.component';
 import { DynamicComponent } from './examples/dynamic/dynamic.component';
 import { AlertComponent } from './examples/dynamic/alert/alert.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -123,7 +124,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 				useFactory: HttpLoaderFactory,
 				deps: [HttpClient]
 			}
-		})
+		}),
+		// For PWA
+		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],
 	providers: [BooksService],
 	bootstrap: [AppComponent],

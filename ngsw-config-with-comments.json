@@ -1,0 +1,57 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  // For static
+  "assetGroups": [
+    {
+      "name": "app",
+      // Loads assets at the beginning and caches them
+      "installMode": "prefetch",
+      "resources": {
+        // Resourses from server
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ],
+        // Resourses from urls
+        "urls": []
+      }
+    },
+    {
+      "name": "assets",
+      // Loads assets on demand
+      "installMode": "lazy",
+      // If new version arrives 'prefetch' loads resourses immediately and 'lazy' only on demand
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+
+  // For dynamic data load
+  "dataGroups": [
+    {
+      "name": "assets",
+      // Cashed urls responses
+      "urls": [],
+      "cacheConfig": {
+        // How many responses do you want to cache
+        "maxSize": 10,
+        // How long do you want to store data
+        "maxAge": "12h",
+        // If we wait for url longer than timeout => use cached resources
+        "timeout": "",
+        // 'freshness': try backend first, then server (takes timeout into account)
+        // 'perfomance': try cached data first if not outdated (takes maxAge into account)
+        "strategy": "freshness"
+      }
+    }
+  ]
+}

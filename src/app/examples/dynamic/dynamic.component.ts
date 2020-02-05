@@ -25,7 +25,7 @@ export class DynamicComponent implements OnDestroy {
   }
 
   /** @internal */
-  private _createAlert(): void {
+  public _createAlert(): void {
     const factory: ComponentFactory<AlertComponent> = this.resolver.resolveComponentFactory(AlertComponent);
     this.componentRef = this.container.createComponent(factory);
     this.componentRef.instance.value = 'someValue';
