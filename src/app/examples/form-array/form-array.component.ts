@@ -19,7 +19,7 @@ export class FormArrayComponent implements OnInit {
         return this.profileForm.get('aliases') as FormArray;
     }
 
-  public ngOnInit(): void {
+    public ngOnInit(): void {
         this.profileForm = new FormGroup({
             firstName: new FormControl(''),
             lastName: new FormControl(''),
@@ -27,6 +27,10 @@ export class FormArrayComponent implements OnInit {
                 this.formBuilder.control('First control')
             ])
         }, {validators: [Validators.required], updateOn: 'blur'});
+
+        this.profileForm.valueChanges.subscribe((data) => {
+            console.log(data);
+        });
     }
 
     public _addAlias() {

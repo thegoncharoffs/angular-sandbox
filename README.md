@@ -26,6 +26,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## SSR (Puppeteer)
+
+To run prerender pages follow these steps:
+
+1. Run `ng build --prod`
+
+2. Run `node ./server/ssr-puppeteer.js` to prerender pages
+
+3. Run `http-server -p 8080 -c-1 ./dist/browser`.
+
+4. To see what is done try to throttle network `Chrome Dev Tools` -> 
+`...` -> `Network Condition` -> `Network Throttling`. The page will load instantly
+while other resources will still load
+
 ## PWA
 
 1. Run `ng add @angular/pwa`. This command will make your angular 

@@ -1,11 +1,17 @@
-<form [formGroup]="profileForm">
+<form [formGroup]="profileForm" style="display: flex; flex-direction: column">
     <div>First Name</div>
+
     <app-text-field formControlName="firstName">
     </app-text-field>
 
     <div> Last Name</div>
+
     <app-text-field formControlName="lastName">
     </app-text-field>
+
+    <app-button (click)="_addAlias()" style="margin: 8px 0">
+        Add Control
+    </app-button>
 
     <div formArrayName="aliases">
         <div *ngFor="let address of aliases.controls; let i=index">
@@ -15,5 +21,3 @@
     </div>
 
 </form>
-
-<app-button (click)="_addAlias()">Add Control</app-button>

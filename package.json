@@ -15,7 +15,7 @@
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:ssr:puppeteer": "ng build --prod --build-optimizer && node server/ssr.js",
+    "puppeteer": "node server/ssr-puppeteer.js",
     "build:client-and-server-bundles": "ng build --prod && ng run angular-sandbox:server:production --bundleDependencies all"
   },
   "private": true,

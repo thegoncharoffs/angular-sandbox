@@ -71,7 +71,7 @@ async function main() {
 
     // Closes Chromium and finishes the express server.
     browser.close();
-    // serverserver.close();
+    server.close();
 }
 
 // Run the main async function
