@@ -11,7 +11,8 @@ let PAGES = [
     '',
     'observable',
     'ng-if',
-    'ng-template'
+    'ng-template',
+    'browser-validator'
 ];
 
 async function main() {

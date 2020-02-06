@@ -42,7 +42,6 @@ export class TextFieldComponent implements ControlValueAccessor {
     /** @internal */
     public _focus(event: Event) {
         this.focus.emit(event);
-        this.propagateTouch && this.propagateTouch();
     }
 
     /** @internal */

@@ -36,7 +36,7 @@ export class DynamicComponent implements OnDestroy {
       console.log('Ticked');
       this.componentRef.instance.value = 'anotherText';
       this.componentRef.changeDetectorRef.detectChanges();
-    }, 3000)
+    }, 3000);
   }
 
   public ngOnDestroy(): void {

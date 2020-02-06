@@ -33,6 +33,7 @@ import {SwitchMapComponent} from './examples/switch-map/switch-map.component';
 import {MergeMapComponent} from './examples/merge-map/merge-map.component';
 import { ShareComponent } from "./examples/share/share.component";
 import { DynamicComponent } from "./examples/dynamic/dynamic.component";
+import { PWAComponent } from "./examples/pwa/pwa.component";
 
 
 const routes: Routes = [
@@ -165,6 +166,10 @@ const routes: Routes = [
     {
         path: 'dynamic',
         component: DynamicComponent
+    },
+    {
+        path: 'pwa',
+        component: PWAComponent
     },
 ];
 

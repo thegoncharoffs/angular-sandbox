@@ -55,6 +55,10 @@ import { DynamicComponent } from './examples/dynamic/dynamic.component';
 import { AlertComponent } from './examples/dynamic/alert/alert.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PWAComponent } from './examples/pwa/pwa.component';
+import { PromptUpdateService } from "./examples/pwa/services/prompt-update.service";
+import { CheckForUpdateService } from "./examples/pwa/services/check-for-updates.service";
+import { LogUpdateService } from "./examples/pwa/services/log-update.service";
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -104,6 +108,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		ShareComponent,
 		DynamicComponent,
 		AlertComponent,
+		PWAComponent,
 	],
 	imports: [
 		BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -126,9 +131,14 @@ export function HttpLoaderFactory(http: HttpClient) {
 			}
 		}),
 		// For PWA
-		// ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],
-	providers: [BooksService],
+	providers: [
+		BooksService,
+		PromptUpdateService,
+		CheckForUpdateService,
+		LogUpdateService
+	],
 	bootstrap: [AppComponent],
 	entryComponents: [AlertComponent],
 })
