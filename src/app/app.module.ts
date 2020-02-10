@@ -131,13 +131,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 			}
 		}),
 		// For PWA
-		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+		// ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],
 	providers: [
 		BooksService,
-		PromptUpdateService,
-		CheckForUpdateService,
-		LogUpdateService
+		// PromptUpdateService,
+		// CheckForUpdateService,
+		// LogUpdateService
 	],
 	bootstrap: [AppComponent],
 	entryComponents: [AlertComponent],

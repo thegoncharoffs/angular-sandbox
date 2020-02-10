@@ -79,6 +79,10 @@ export class AppComponent {
                     title: 'Dynamic Component',
                     routerLink: '/dynamic'
                 },
+                {
+                    title: 'PWA',
+                    routerLink: '/pwa'
+                },
             ]
         },
         {

@@ -26,12 +26,12 @@ export class PWAComponent implements OnInit {
             (subscription) => console.log('Resolved', subscription),
             () => console.log
         );
-        // // or
-       // let promise = Notification.requestPermission();
-       // promise.then(
-       //     () => console.log('Resolved'),
-       //     () => console.log('Rejected')
-       // );
+        // or
+        // let promise = Notification.requestPermission();
+        // promise.then(
+        //     () => console.log('Resolved'),
+        //     () => console.log('Rejected')
+        // );
     }
 
     /** @internal */
