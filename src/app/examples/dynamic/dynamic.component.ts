@@ -16,7 +16,7 @@ import { AlertComponent } from './alert/alert.component';
   styleUrls: ['./dynamic.component.scss']
 })
 export class DynamicComponent implements OnDestroy {
-  @ViewChild("alertContainer", {static: false, read: ViewContainerRef})
+  @ViewChild("alertContainer", { read: ViewContainerRef })
   private container: ViewContainerRef;
 
   private componentRef: ComponentRef<AlertComponent>;

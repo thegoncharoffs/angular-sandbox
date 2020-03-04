@@ -1,6 +1,7 @@
-<form [formGroup]="profileForm">
+<form [formGroup]="profileForm" (ngSubmit)="_onSubmit()">
     <div>First Name</div>
     <app-text-field formControlName="firstName"></app-text-field>
     <div> Last Name</div>
     <app-text-field formControlName="lastName"></app-text-field>
+    <button type="submit">Submit</button>
 </form>

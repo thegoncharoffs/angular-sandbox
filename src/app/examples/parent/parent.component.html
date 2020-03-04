@@ -1,6 +1,10 @@
 <app-child1
     [template]="itemTemplate"
+    [value]="'ssdsd'"
 >
+    <div #divElement2>
+        <div #divElement> </div>
+    </div>
 </app-child1>
 
 <ng-template #itemTemplate let-value1="value1" let-value2="value2">

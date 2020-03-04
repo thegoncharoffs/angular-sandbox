@@ -22,4 +22,9 @@ export class FormGroupComponent implements OnInit {
             console.log('Value of First Name lags in Form: ', this.profileForm.value['firstName']);
         });
     }
+
+    /** @internal */
+    public _onSubmit() {
+        console.log(event);
+    }
 }

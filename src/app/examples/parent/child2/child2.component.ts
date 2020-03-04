@@ -1,12 +1,22 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, ContentChild} from '@angular/core';
+import {
+    AfterViewInit,
+    Component,
+    ElementRef,
+    OnDestroy,
+    OnInit,
+    ViewChild,
+    ContentChild,
+    ChangeDetectionStrategy
+} from '@angular/core';
 
 @Component({
     selector: 'app-child2',
     templateUrl: './child2.component.html',
-    styleUrls: ['./child2.component.scss']
+    styleUrls: ['./child2.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Child2Component implements OnInit, AfterViewInit, OnDestroy {
-    @ContentChild('divElement', {static: false})
+    @ContentChild('divElement')
     public divElement: ElementRef;
 
     constructor() {
@@ -16,7 +26,7 @@ export class Child2Component implements OnInit, AfterViewInit, OnDestroy {
     }
 
     public ngAfterViewInit(): void {
-        console.log('Child2: ', this.divElement && this.divElement.nativeElement);
+        console.log('Child2: ', this.divElement?.nativeElement);
     }
 
     public ngOnDestroy(): void {

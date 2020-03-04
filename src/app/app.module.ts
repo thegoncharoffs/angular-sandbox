@@ -140,7 +140,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 		// LogUpdateService
 	],
 	bootstrap: [AppComponent],
-	entryComponents: [AlertComponent],
 })
 export class AppModule {
 }
