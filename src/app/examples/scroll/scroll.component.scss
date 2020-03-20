@@ -1,0 +1,69 @@
+.app-scroll-example {
+  display: flex;
+  justify-content: space-between;
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 20vw;
+    background: darkgrey;
+    border: black solid 2px;
+  }
+
+  &__max-height {
+    max-height: 80%;
+    width: 80%;
+    background: red;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    & > span {
+      height: 100%;
+    }
+  }
+
+  &__max-width {
+    height: 80%;
+    max-width: 80%;
+    background: yellow;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    & > span {
+    }
+  }
+
+  &__auto {
+    max-height: 80%;
+    max-width: 80%;
+    background: green;
+    overflow: auto;
+
+    & > span {
+      height: 200%;
+      width: 200%;
+    }
+  }
+
+  &__hack {
+    display: flex;
+    max-height: 80%;
+    max-width: 80%;
+    background: orange;
+
+    &-inner {
+      // Hack to count well scroll height
+      display: flex;
+      min-height: 0;
+      ///////
+      overflow: auto;
+    }
+
+    span {
+      height: 200%;
+      width: 200%;
+    }
+  }
+}

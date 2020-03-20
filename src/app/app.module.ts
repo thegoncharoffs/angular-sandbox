@@ -59,6 +59,7 @@ import { PWAComponent } from './examples/pwa/pwa.component';
 import { PromptUpdateService } from "./examples/pwa/services/prompt-update.service";
 import { CheckForUpdateService } from "./examples/pwa/services/check-for-updates.service";
 import { LogUpdateService } from "./examples/pwa/services/log-update.service";
+import { ScrollComponent } from './examples/scroll/scroll.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -109,6 +110,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		DynamicComponent,
 		AlertComponent,
 		PWAComponent,
+		ScrollComponent,
 	],
 	imports: [
 		BrowserModule.withServerTransition({appId: 'serverApp'}),

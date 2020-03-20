@@ -86,8 +86,13 @@ export class AppComponent {
             ]
         },
         {
-            title: 'SCSS',
-            children: []
+            title: 'Layout',
+            children: [
+                {
+                    title: 'Scroll',
+                    routerLink: '/scroll'
+                },
+            ]
         },
         {
             title: 'Plain JS',

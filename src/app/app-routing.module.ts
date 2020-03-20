@@ -34,6 +34,7 @@ import {MergeMapComponent} from './examples/merge-map/merge-map.component';
 import { ShareComponent } from "./examples/share/share.component";
 import { DynamicComponent } from "./examples/dynamic/dynamic.component";
 import { PWAComponent } from "./examples/pwa/pwa.component";
+import { ScrollComponent } from "./examples/scroll/scroll.component";
 
 
 const routes: Routes = [
@@ -170,6 +171,10 @@ const routes: Routes = [
     {
         path: 'pwa',
         component: PWAComponent
+    },
+    {
+        path: 'scroll',
+        component: ScrollComponent
     },
 ];
 
