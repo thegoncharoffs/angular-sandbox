@@ -10,8 +10,7 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('123');
-    
+    console.log('123');    
   }
 
 }
