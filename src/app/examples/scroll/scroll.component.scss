@@ -66,4 +66,57 @@
       width: 200%;
     }
   }
+
+  &__radial-shadow {
+    max-height: 80%;
+    max-width: 80%;
+    overflow: auto;
+
+    $background-color: blue;
+    $shadow-height: 30px;
+    $shadow-color: rgba(0, 0, 0, 0.4);
+
+    background: 
+      linear-gradient($background-color, transparent),
+      linear-gradient(transparent, $background-color) 0 100%,
+      radial-gradient(farthest-side at 50% 0, $shadow-color, transparent),
+      radial-gradient(farthest-side at 50% 100%, $shadow-color, transparent) 0 100%;
+    background-color: $background-color;
+    background-repeat: no-repeat;
+    background-attachment: local, local, scroll, scroll;
+    background-size: 100% $shadow-height*2, 100% $shadow-height*2, 100% $shadow-height, 100% $shadow-height;
+
+    & > span {
+      height: 200%;
+      width: 200%;
+    }
+  }
+
+  &__linear-shadow {
+    max-height: 80%;
+    max-width: 80%;
+    overflow: auto;
+
+    $background-color: pink;
+    $shadow-height: 20px;
+    $shadow-color: rgba(0, 0, 0, 0.4);
+
+    background:
+        // Left start and right start 'inside' container colors (they overlap the shadows)
+        linear-gradient($background-color, transparent),
+        linear-gradient(transparent, $background-color) 0 100%,
+        // Left and right scroll shadows
+        linear-gradient($shadow-color, transparent),
+        linear-gradient(transparent, $shadow-color) 0 100%;
+
+    background-repeat: no-repeat;
+    background-color: $background-color;
+    background-size: 100% $shadow-height*2, 100% $shadow-height*2, 100% $shadow-height, 100% $shadow-height;
+    background-attachment: local, local, scroll, scroll;
+
+    & > span {
+      height: 200%;
+      width: 200%;
+    }
+  }
 }
