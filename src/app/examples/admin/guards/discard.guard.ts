@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot} from '@angular/router';
-import {Observable, of} from 'rxjs';
-import {delay} from 'rxjs/operators';
-import {AdminComponent} from './admin.component';
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot } from '@angular/router';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
+import { AdminComponent } from '../admin.component';
 
 @Injectable({
     providedIn: 'root'

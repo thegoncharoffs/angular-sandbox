@@ -1,0 +1,28 @@
+<h1>Sign Up</h1>
+<form 
+    class="app-signup__form"
+    [formGroup]="_form" 
+    (ngSubmit)="_onSubmit()"
+    *ngIf="!_isSuccessful || !_isLoggedIn"
+>
+    <app-text-field 
+        class="app-signup__field"
+        formControlName='userName'
+    ></app-text-field>
+
+    <app-text-field 
+        class="app-signup__field"
+        formControlName='login'
+    ></app-text-field>
+
+    <app-text-field 
+        class="app-signup__field"
+        formControlName='password'
+    ></app-text-field>
+
+    <app-button (click)="_onSubmit()">Sumbit</app-button>
+</form>
+
+<div *ngIf="_isSuccessful">Registration success</div>
+
+<div *ngIf="_isSignUpFailed">Registration failed</div>

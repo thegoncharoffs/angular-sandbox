@@ -1,5 +1,10 @@
 {
   "extends": "tslint:recommended",
+  "module": "commonjs",
+  "esModuleInterop": true,
+  "target": "es6",
+  "noImplicitAny": true,
+  "moduleResolution": "node",
   "rules": {
     "array-type": false,
     "arrow-parens": false,

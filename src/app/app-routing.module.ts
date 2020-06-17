@@ -1,40 +1,41 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {NgrxComponent} from './examples/ngrx/ngrx.component';
-import {ObservableComponent} from './examples/observable/observable.component';
-import {NgxTranslateComponent} from './examples/ngx-translate/ngx-translate.component';
-import {NgTemplateComponent} from './examples/ng-template/ng-template.component';
-import {NgIfComponent} from './examples/ng-if/ng-if.component';
-import {NgForComponent} from './examples/ng-for/ng-for.component';
-import {NgSwitchComponent} from './examples/ng-switch/ng-switch.component';
-import {FormControlComponent} from './examples/form-control/form-control.component';
-import {FormGroupComponent} from './examples/form-group/form-group.component';
-import {FormArrayComponent} from './examples/form-array/form-array.component';
-import {CombineLatestComponent} from './examples/combine-latest/combine-latest.component';
-import {ConcatComponent} from './examples/concat/concat.component';
-import {TakeComponent} from './examples/take/take.component';
-import {IntervalComponent} from './examples/interval/interval.component';
-import {ConcatAllComponent} from './examples/concat-all/concat-all.component';
-import {WithLatestFromComponent} from './examples/with-latest-from/with-latest-from.component';
-import {QueryListComponent} from './examples/query-list/query-list.component';
-import {MocksComponent} from './examples/mocks/mocks.component';
-import {PromiseComponent} from './examples/promise/promise.component';
-import {BrowserValidatorComponent} from './examples/browser-validator/browser-validator.component';
-import {AuthGuard} from './examples/admin/auth.guard';
-import {AdminComponent} from './examples/admin/admin.component';
-import {DiscardGuard} from './examples/admin/discard.guard';
-import {SubjectComponent} from './examples/subject/subject.component';
-import {MulticastObservableComponent} from './examples/multicast-observable/multicast-observable.component';
-import {BehaviorSubjectComponent} from './examples/behavior-subject/behavior-subject.component';
-import {ReplaySubjectComponent} from './examples/replay-subject/replay-subject.component';
-import {AsyncSubjectComponent} from './examples/async-subject/async-subject.component';
-import {ParentComponent} from './examples/parent/parent.component';
-import {SwitchMapComponent} from './examples/switch-map/switch-map.component';
-import {MergeMapComponent} from './examples/merge-map/merge-map.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { NgrxComponent } from './examples/ngrx/ngrx.component';
+import { ObservableComponent } from './examples/observable/observable.component';
+import { NgxTranslateComponent } from './examples/ngx-translate/ngx-translate.component';
+import { NgTemplateComponent } from './examples/ng-template/ng-template.component';
+import { NgIfComponent } from './examples/ng-if/ng-if.component';
+import { NgForComponent } from './examples/ng-for/ng-for.component';
+import { NgSwitchComponent } from './examples/ng-switch/ng-switch.component';
+import { FormControlComponent } from './examples/form-control/form-control.component';
+import { FormGroupComponent } from './examples/form-group/form-group.component';
+import { FormArrayComponent } from './examples/form-array/form-array.component';
+import { CombineLatestComponent } from './examples/combine-latest/combine-latest.component';
+import { ConcatComponent } from './examples/concat/concat.component';
+import { TakeComponent } from './examples/take/take.component';
+import { IntervalComponent } from './examples/interval/interval.component';
+import { ConcatAllComponent } from './examples/concat-all/concat-all.component';
+import { WithLatestFromComponent } from './examples/with-latest-from/with-latest-from.component';
+import { QueryListComponent } from './examples/query-list/query-list.component';
+import { MocksComponent } from './examples/mocks/mocks.component';
+import { PromiseComponent } from './examples/promise/promise.component';
+import { BrowserValidatorComponent } from './examples/browser-validator/browser-validator.component';
+import { AuthGuard } from './examples/admin/guards/auth.guard';
+import { AdminComponent } from './examples/admin/admin.component';
+import { DiscardGuard } from './examples/admin/guards/discard.guard';
+import { SubjectComponent } from './examples/subject/subject.component';
+import { MulticastObservableComponent } from './examples/multicast-observable/multicast-observable.component';
+import { BehaviorSubjectComponent } from './examples/behavior-subject/behavior-subject.component';
+import { ReplaySubjectComponent } from './examples/replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './examples/async-subject/async-subject.component';
+import { ParentComponent } from './examples/parent/parent.component';
+import { SwitchMapComponent } from './examples/switch-map/switch-map.component';
+import { MergeMapComponent } from './examples/merge-map/merge-map.component';
 import { ShareComponent } from "./examples/share/share.component";
 import { DynamicComponent } from "./examples/dynamic/dynamic.component";
 import { PWAComponent } from "./examples/pwa/pwa.component";
 import { ScrollComponent } from "./examples/scroll/scroll.component";
+import { AuthentificationComponent } from './examples/authentification/authentification.component';
 
 
 const routes: Routes = [
@@ -175,6 +176,10 @@ const routes: Routes = [
     {
         path: 'scroll',
         component: ScrollComponent
+    },
+    {
+        path: 'authentification',
+        component: AuthentificationComponent
     },
 ];
 

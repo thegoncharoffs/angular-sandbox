@@ -83,6 +83,10 @@ export class AppComponent {
                     title: 'PWA',
                     routerLink: '/pwa'
                 },
+                {
+                    title: 'Authentification',
+                    routerLink: '/authentification'
+                },
             ]
         },
         {

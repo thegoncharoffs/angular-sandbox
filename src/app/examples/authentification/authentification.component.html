@@ -1,0 +1,10 @@
+<app-signin></app-signin>
+
+<app-signup></app-signup>
+
+
+<div>Is user logged in: {{ isLoggedIn }} </div>
+<div>Public content: {{ (publicContent$ | async) || 'None' }} </div>
+<div>User content: {{ (userContent$ | async) || 'None' }} </div>
+<div>Moderator content: {{ (moderatorContent$ | async) || 'None' }} </div>
+<div>Admin content: {{ (adminContent$ | async) || 'None' }} </div>
