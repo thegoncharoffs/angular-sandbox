@@ -18,7 +18,6 @@ export function verifyToken(req, res, next) {
                 message: "Unauthorized!"
             });
         }
-        console.log(decoded);
         req.body.id = decoded['id'];
         next();
     });

@@ -1,10 +1,11 @@
 import * as express from 'express';
-import { UserController, AuthController } from './controllers';
+import { UserController, AuthController, FilesController } from './controllers';
 import { json, urlencoded } from 'body-parser';
 import * as cors from "cors";
 import updateUsers from './helpers/updateUsers';
 import { hashSync } from 'bcrypt';
 import { Role, User } from './models';
+import * as fileUpload from 'express-fileupload';
 
 class App {
   public app: express.Application;
@@ -63,11 +64,15 @@ class App {
 
     // parse requests of content-type - application/x-www-form-urlencoded
     this.app.use(urlencoded({ extended: true }));
+
+    // parses files
+    this.app.use(fileUpload());
   }
 
   private initializeControllers() {
     this.app.use('/', new AuthController().router);
     this.app.use('/', new UserController().router);
+    this.app.use('/', new FilesController().router);
   }
 
   public listen() {

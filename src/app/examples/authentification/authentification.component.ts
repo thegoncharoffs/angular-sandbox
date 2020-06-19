@@ -29,7 +29,4 @@ export class AuthentificationComponent implements OnInit {
     this.adminContent$ = this.userService.getAdminBoard();
     this.isLoggedIn = this.authService.isLoggedIn();
   }
-
-
-
 }

@@ -65,6 +65,8 @@ import { SigninComponent } from './examples/authentification/components/signin/s
 import { AuthentificationComponent } from './examples/authentification/authentification.component';
 import { AuthService } from './examples/authentification/services/auth.service';
 import { authInterceptorProviders } from './examples/authentification/interceptors/auth.interceptor';
+import { UploadService } from './examples/authentification/services/upload.service';
+import { UploadComponent } from './examples/authentification/components/upload/upload.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
@@ -119,6 +121,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		SignupComponent,
 		SigninComponent,
 		AuthentificationComponent,
+		UploadComponent,
 	],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -146,6 +149,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 	providers: [
 		BooksService,
 		AuthService,
+		UploadService,
 		authInterceptorProviders,
 		// PromptUpdateService,
 		// CheckForUpdateService,
